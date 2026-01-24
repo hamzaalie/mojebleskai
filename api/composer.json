@@ -1,0 +1,7 @@
+{
+    "name": "mojeblskai/website",
+    "description": "Moje Blsk AI Website",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
