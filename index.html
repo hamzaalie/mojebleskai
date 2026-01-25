@@ -1130,12 +1130,13 @@
                             <span class="fs-7 fw-medium py-narrow px-2 bg-dark text-white dark:bg-primary dark:text-dark rounded-pill" data-i18n="hero.badge">AI-Powered Web Design</span>
                             <h2 class="h2 lg:h1 xl:display-4 m-0 text-center">
                                 <span data-i18n="hero.title">Stunning websites that </span>
-                                <span id="typed-container" class="text-tertiary dark:text-primary" data-uc-typed="typeSpeed: 80; backSpeed: 50; backDelay: 1500; loop: true;">
-                                    <span style="display: none;" data-i18n="hero.typed1">grow your business</span>
-                                    <span style="display: none;" data-i18n="hero.typed2">drive results</span>
-                                    <span style="display: none;" data-i18n="hero.typed3">convert visitors</span>
-                                </span>
+                                <span class="text-tertiary dark:text-primary" id="typed-text"></span>
                             </h2>
+                            <div id="typed-strings" style="display: none;">
+                                <span data-i18n="hero.typed1">grow your business</span>
+                                <span data-i18n="hero.typed2">drive results</span>
+                                <span data-i18n="hero.typed3">convert visitors</span>
+                            </div>
                             <p class="fs-5 lg:fs-4" data-i18n="hero.subtitle">Transform your vision into a beautiful, high-converting website with AI-powered design.</p>
                             <div class="panel vstack items-center gap-1 max-w-400px lg:max-w-750px mx-auto text-center mt-2 xl:mt-4">
                                 <div class="mb-2 lg:mb-3">
@@ -2004,8 +2005,25 @@
     <script defer src="assets/js/helpers/swiper-helper.js"></script>
     <script defer src="assets/js/helpers/splitype-helper.js"></script>
     <script defer src="assets/js/helpers/anime-helper.js"></script>
-    <script defer src="assets/js/helpers/typed-helper.js"></script>
     <script defer src="assets/js/helpers/tilt-helper.js"></script>
+    
+    <!-- Initialize Typed.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Typed !== 'undefined') {
+                var typed = new Typed('#typed-text', {
+                    stringsElement: '#typed-strings',
+                    typeSpeed: 80,
+                    backSpeed: 50,
+                    backDelay: 1500,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            }
+        });
+    </script>
+    
     <script defer src="assets/js/core/marquee.js"></script>
     <script defer src="assets/js/uikit-components-bs.js"></script>
 
