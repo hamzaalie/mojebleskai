@@ -1128,7 +1128,9 @@
                             <span class="fs-7 fw-medium py-narrow px-2 bg-dark text-white dark:bg-primary dark:text-dark rounded-pill" data-i18n="hero.badge">AI-Powered Web Design</span>
                             <h2 class="h2 lg:h1 xl:display-4 m-0 text-center">
                                 <span data-i18n="hero.title">Stunning websites that </span>
-                                <span class="text-tertiary dark:text-primary" id="typed-text"></span>
+                                <span class="text-tertiary dark:text-primary">
+                                    <span id="typing-text"></span><span id="typing-cursor" style="opacity: 1;">|</span>
+                                </span>
                             </h2>
                             <p class="fs-5 lg:fs-4" data-i18n="hero.subtitle">Transform your vision into a beautiful, high-converting website with AI-powered design.</p>
                             <div class="panel vstack items-center gap-1 max-w-400px lg:max-w-750px mx-auto text-center mt-2 xl:mt-4">
@@ -2005,35 +2007,66 @@
     <script defer src="assets/js/form.js"></script>
     <script defer src="assets/js/app.js"></script>
     
-    <!-- Typed.js library and initialization -->
-    <script src="assets/js/libs/typed.min.js"></script>
+    <!-- Custom Typing Animation -->
+    <style>
+        #typing-cursor {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+    </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Wait for all resources to load
-            if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                initTypedAnimation();
-            } else {
-                window.addEventListener('load', initTypedAnimation);
+        (function() {
+            const phrases = ['grow your business', 'drive results', 'convert visitors'];
+            const typingSpeed = 80;
+            const deletingSpeed = 50;
+            const delayBetweenPhrases = 1500;
+            
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingElement = null;
+            
+            function type() {
+                if (!typingElement) {
+                    typingElement = document.getElementById('typing-text');
+                    if (!typingElement) {
+                        setTimeout(type, 100);
+                        return;
+                    }
+                }
+                
+                const currentPhrase = phrases[phraseIndex];
+                
+                if (isDeleting) {
+                    typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let timeout = isDeleting ? deletingSpeed : typingSpeed;
+                
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    timeout = delayBetweenPhrases;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+                
+                setTimeout(type, timeout);
             }
             
-            function initTypedAnimation() {
-                var typedElement = document.getElementById('typed-text');
-                if (typedElement && typeof Typed !== 'undefined') {
-                    new Typed('#typed-text', {
-                        strings: ['grow your business', 'drive results', 'convert visitors'],
-                        typeSpeed: 80,
-                        backSpeed: 50,
-                        backDelay: 1500,
-                        loop: true,
-                        showCursor: true,
-                        cursorChar: '|'
-                    });
-                    console.log('Typed.js initialized successfully');
-                } else {
-                    console.error('Typed.js or element not found');
-                }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', type);
+            } else {
+                type();
             }
-        });
+        })();
     </script>
 
     <script>
