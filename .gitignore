@@ -4,7 +4,7 @@ node_modules/
 .pnp.js
 
 # Build outputs
-dist/
+# dist/ - Don't ignore dist, Vercel needs it for deployment
 build/
 .vercel
 
