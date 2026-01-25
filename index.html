@@ -19,18 +19,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Moje Blsk AI - AI-Powered Website Agency" />
     <meta property="og:description" content="We create stunning, high-converting websites powered by artificial intelligence. Custom web design & development solutions." />
-    <meta property="og:url" content="https://mojeblskai.com" />
+    <meta property="og:url" content="https://mojeblskai.vercel.app" />
     <meta property="og:site_name" content="Moje Blsk AI" />
-    <meta property="og:image" content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg" />
-    <meta property="og:image:width" content="1180" />
-    <meta property="og:image:height" content="600" />
+    <meta property="og:image" content="https://mojeblskai.vercel.app/assets/images/mojeblesksiteicon.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
     <meta property="og:image:type" content="image/png" />
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Moje Blsk AI - AI-Powered Website Agency">
     <meta name="twitter:description" content="We create stunning, high-converting websites powered by artificial intelligence. Custom web design & development solutions.">
-    <meta name="twitter:image" content="assets/images/common/seo-image.jpg">
+    <meta name="twitter:image" content="https://mojeblskai.vercel.app/assets/images/mojeblesksiteicon.png">
 
     <link rel="canonical" href="https://mojeblskai.com" />
 
@@ -53,7 +53,6 @@
     <link rel="preload" href="assets/js/libs/scrollmagic.min.js" as="script">
     <link rel="preload" href="assets/js/libs/swiper-bundle.min.js" as="script">
     <link rel="preload" href="assets/js/libs/anime.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/typed.min.js" as="script">
     <link rel="preload" href="assets/js/libs/tilt.min.js" as="script">
     <link rel="preload" href="assets/js/libs/split-type.min.js" as="script">
     <link rel="preload" href="assets/js/libs/prettify.min.js" as="script">
@@ -64,7 +63,6 @@
     <link rel="preload" href="assets/js/helpers/swiper-helper.js" as="script">
     <link rel="preload" href="assets/js/helpers/splitype-helper.js" as="script">
     <link rel="preload" href="assets/js/helpers/anime-helper.js" as="script">
-    <link rel="preload" href="assets/js/helpers/typed-helper.js" as="script">
     <link rel="preload" href="assets/js/helpers/tilt-helper.js" as="script">
     <link rel="preload" href="assets/js/core/marquee.js" as="script">
     <link rel="preload" href="assets/js/uikit-components-bs.js" as="script">
@@ -2007,26 +2005,34 @@
     <script defer src="assets/js/form.js"></script>
     <script defer src="assets/js/app.js"></script>
     
-    <!-- Typed.js initialization with direct strings -->
+    <!-- Typed.js library and initialization -->
     <script src="assets/js/libs/typed.min.js"></script>
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                if (typeof Typed !== 'undefined') {
-                    var typedElement = document.getElementById('typed-text');
-                    if (typedElement) {
-                        new Typed('#typed-text', {
-                            strings: ['grow your business', 'drive results', 'convert visitors'],
-                            typeSpeed: 80,
-                            backSpeed: 50,
-                            backDelay: 1500,
-                            loop: true,
-                            showCursor: true,
-                            cursorChar: '|'
-                        });
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for all resources to load
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                initTypedAnimation();
+            } else {
+                window.addEventListener('load', initTypedAnimation);
+            }
+            
+            function initTypedAnimation() {
+                var typedElement = document.getElementById('typed-text');
+                if (typedElement && typeof Typed !== 'undefined') {
+                    new Typed('#typed-text', {
+                        strings: ['grow your business', 'drive results', 'convert visitors'],
+                        typeSpeed: 80,
+                        backSpeed: 50,
+                        backDelay: 1500,
+                        loop: true,
+                        showCursor: true,
+                        cursorChar: '|'
+                    });
+                    console.log('Typed.js initialized successfully');
+                } else {
+                    console.error('Typed.js or element not found');
                 }
-            }, 100);
+            }
         });
     </script>
 
