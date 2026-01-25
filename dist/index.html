@@ -1983,7 +1983,6 @@
     <script defer src="assets/js/libs/anime.min.js"></script>
     <script defer src="assets/js/libs/swiper-bundle.min.js"></script>
     <script defer src="assets/js/libs/scrollmagic.min.js"></script>
-    <script defer src="assets/js/libs/typed.min.js"></script>
     <script defer src="assets/js/libs/tilt.min.js"></script>
     <script defer src="assets/js/libs/split-type.min.js"></script>
     <script defer src="assets/js/libs/prettify.min.js"></script>
@@ -2002,11 +2001,12 @@
     <script defer src="assets/js/form.js"></script>
     <script defer src="assets/js/app.js"></script>
     
-    <!-- Initialize Typed.js after all libraries are loaded -->
+    <!-- Load Typed.js without defer and initialize immediately -->
+    <script src="assets/js/libs/typed.min.js"></script>
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                if (typeof Typed !== 'undefined') {
+        (function() {
+            function initTyped() {
+                if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
                     new Typed('#typed-text', {
                         stringsElement: '#typed-strings',
                         typeSpeed: 80,
@@ -2017,10 +2017,16 @@
                         cursorChar: '|'
                     });
                 } else {
-                    console.error('Typed.js library not loaded');
+                    setTimeout(initTyped, 50);
                 }
-            }, 100);
-        });
+            }
+            
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initTyped);
+            } else {
+                initTyped();
+            }
+        })();
     </script>
 
     <script>
