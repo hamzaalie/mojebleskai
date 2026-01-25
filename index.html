@@ -1132,11 +1132,6 @@
                                 <span data-i18n="hero.title">Stunning websites that </span>
                                 <span class="text-tertiary dark:text-primary" id="typed-text"></span>
                             </h2>
-                            <div id="typed-strings" style="display: none;">
-                                <span data-i18n="hero.typed1">grow your business</span>
-                                <span data-i18n="hero.typed2">drive results</span>
-                                <span data-i18n="hero.typed3">convert visitors</span>
-                            </div>
                             <p class="fs-5 lg:fs-4" data-i18n="hero.subtitle">Transform your vision into a beautiful, high-converting website with AI-powered design.</p>
                             <div class="panel vstack items-center gap-1 max-w-400px lg:max-w-750px mx-auto text-center mt-2 xl:mt-4">
                                 <div class="mb-2 lg:mb-3">
@@ -2012,32 +2007,27 @@
     <script defer src="assets/js/form.js"></script>
     <script defer src="assets/js/app.js"></script>
     
-    <!-- Load Typed.js without defer and initialize immediately -->
+    <!-- Typed.js initialization with direct strings -->
     <script src="assets/js/libs/typed.min.js"></script>
     <script>
-        (function() {
-            function initTyped() {
-                if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
-                    new Typed('#typed-text', {
-                        stringsElement: '#typed-strings',
-                        typeSpeed: 80,
-                        backSpeed: 50,
-                        backDelay: 1500,
-                        loop: true,
-                        showCursor: true,
-                        cursorChar: '|'
-                    });
-                } else {
-                    setTimeout(initTyped, 50);
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                if (typeof Typed !== 'undefined') {
+                    var typedElement = document.getElementById('typed-text');
+                    if (typedElement) {
+                        new Typed('#typed-text', {
+                            strings: ['grow your business', 'drive results', 'convert visitors'],
+                            typeSpeed: 80,
+                            backSpeed: 50,
+                            backDelay: 1500,
+                            loop: true,
+                            showCursor: true,
+                            cursorChar: '|'
+                        });
+                    }
                 }
-            }
-            
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initTyped);
-            } else {
-                initTyped();
-            }
-        })();
+            }, 100);
+        });
     </script>
 
     <script>
