@@ -2019,7 +2019,8 @@
     </style>
     <script>
         (function() {
-            const phrases = ['grow your business', 'drive results', 'convert visitors'];
+            // Default phrases - will be overwritten by translation system
+            window.typingPhrases = ['grow your business', 'drive results', 'convert visitors'];
             const typingSpeed = 80;
             const deletingSpeed = 50;
             const delayBetweenPhrases = 1500;
@@ -2038,7 +2039,7 @@
                     }
                 }
                 
-                const currentPhrase = phrases[phraseIndex];
+                const currentPhrase = window.typingPhrases[phraseIndex];
                 
                 if (isDeleting) {
                     typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -2055,11 +2056,22 @@
                     isDeleting = true;
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    phraseIndex = (phraseIndex + 1) % window.typingPhrases.length;
                 }
                 
                 setTimeout(type, timeout);
             }
+            
+            // Function to reset typing animation with new phrases
+            window.resetTypingAnimation = function(newPhrases) {
+                window.typingPhrases = newPhrases;
+                phraseIndex = 0;
+                charIndex = 0;
+                isDeleting = false;
+                if (typingElement) {
+                    typingElement.textContent = '';
+                }
+            };
             
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', type);
@@ -2574,6 +2586,16 @@
             }
         };
 
+        // Set initial typing phrases based on saved language IMMEDIATELY
+        (function() {
+            const savedLang = localStorage.getItem('site-language') || 'en';
+            if (savedLang === 'cz' && translations.cz && translations.cz['hero.typed']) {
+                window.typingPhrases = translations.cz['hero.typed'];
+            } else if (translations.en && translations.en['hero.typed']) {
+                window.typingPhrases = translations.en['hero.typed'];
+            }
+        })();
+
         // Language Switcher Logic
         document.addEventListener('DOMContentLoaded', function() {
             const langToggle = document.getElementById('lang-toggle');
@@ -2656,46 +2678,9 @@
                     }
                 });
                 
-                // Update typed.js component by replacing the element completely
-                const typedContainer = document.getElementById('typed-container');
-                if (typedContainer && t['hero.typed']) {
-                    // Destroy existing Typed instance if it exists
-                    if (window.typedInstance) {
-                        window.typedInstance.destroy();
-                        window.typedInstance = null;
-                    }
-                    
-                    // Remove any leftover cursor elements
-                    document.querySelectorAll('.typed-cursor').forEach(el => el.remove());
-                    
-                    // Create a new container with translated strings
-                    const newContainer = document.createElement('span');
-                    newContainer.id = 'typed-container';
-                    newContainer.className = 'text-tertiary dark:text-primary';
-                    
-                    // Add translated strings as child spans
-                    t['hero.typed'].forEach(text => {
-                        const span = document.createElement('span');
-                        span.textContent = text;
-                        newContainer.appendChild(span);
-                    });
-                    
-                    // Replace the old container
-                    typedContainer.parentNode.replaceChild(newContainer, typedContainer);
-                    
-                    // Re-trigger the typed initialization
-                    if (window.Typed) {
-                        const content = newContainer.cloneNode(true);
-                        newContainer.innerHTML = '';
-                        window.typedInstance = new Typed(newContainer, {
-                            stringsElement: content,
-                            typeSpeed: 80,
-                            backSpeed: 50,
-                            backDelay: 1500,
-                            loop: true,
-                            showCursor: true
-                        });
-                    }
+                // Update typing animation with translated phrases
+                if (t['hero.typed'] && window.resetTypingAnimation) {
+                    window.resetTypingAnimation(t['hero.typed']);
                 }
                 
                 // Update HTML lang attribute
