@@ -2,17 +2,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ5HXLXM65"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LQ5HXLXM65');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preconnect to external origins for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Primary SEO Meta Tags -->
     <title>Moje Blesk AI | Tvorba Webových Stránek s AI | Web Design Agency Czech</title>
@@ -175,40 +172,42 @@
     }
     </script>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('eyvjqEOJPE-SBmmN2');
-        })();
+    <!-- Critical CSS inline for faster FCP -->
+    <style>
+        /* Critical above-the-fold styles */
+        body{margin:0;font-family:system-ui,-apple-system,sans-serif}
+        .uni-body{overflow-x:hidden}
+        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:#1a1a2e;display:flex;align-items:center;justify-content:center}
+    </style>
+
+    <!-- Deferred Google Analytics - loads after page -->
+    <script>
+        window.addEventListener('load', function() {
+            var ga = document.createElement('script');
+            ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-LQ5HXLXM65';
+            ga.async = true;
+            document.head.appendChild(ga);
+            ga.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-LQ5HXLXM65');
+            };
+        });
     </script>
 
-    <!-- preload head styles -->
-    <link rel="preload" href="assets/css/fonts.css" as="style">
-    <link rel="preload" href="assets/css/unicons.min.css" as="style">
-    <link rel="preload" href="assets/css/swiper-bundle.min.css" as="style">
-    <link rel="preload" href="assets/css/magic-cursor.min.css" as="style">
-
-    <!-- preload footer scripts -->
-    <link rel="preload" href="assets/js/libs/jquery.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/scrollmagic.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/swiper-bundle.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/anime.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/tilt.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/split-type.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/prettify.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/gsap.min.js" as="script">
-    <link rel="preload" href="assets/js/libs/smooth-scroll.min.js" as="script">
-    <link rel="preload" href="assets/js/core/magic-cursor.js" as="script">
-    <link rel="preload" href="assets/js/helpers/data-attr-helper.js" as="script">
-    <link rel="preload" href="assets/js/helpers/swiper-helper.js" as="script">
-    <link rel="preload" href="assets/js/helpers/splitype-helper.js" as="script">
-    <link rel="preload" href="assets/js/helpers/anime-helper.js" as="script">
-    <link rel="preload" href="assets/js/helpers/tilt-helper.js" as="script">
-    <link rel="preload" href="assets/js/core/marquee.js" as="script">
-    <link rel="preload" href="assets/js/uikit-components-bs.js" as="script">
-    <link rel="preload" href="assets/js/form.js" as="script">
-    <link rel="preload" href="assets/js/app.js" as="script">
+    <!-- EmailJS SDK - deferred -->
+    <script>
+        window.addEventListener('load', function() {
+            var emailjs = document.createElement('script');
+            emailjs.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+            emailjs.async = true;
+            document.head.appendChild(emailjs);
+            emailjs.onload = function() {
+                window.emailjs && window.emailjs.init('eyvjqEOJPE-SBmmN2');
+            };
+        });
+    </script>
 
     <!-- app head for bootstrap core -->
     <script src="assets/js/app-head-bs.js"></script>
@@ -216,19 +215,25 @@
     <!-- include uni-core components -->
     <link rel="stylesheet" href="assets/js/uni-core/css/uni-core.min.css">
 
-    <!-- include styles -->
+    <!-- Critical styles - load immediately -->
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/unicons.min.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/prettify.min.css">
-    <link rel="stylesheet" href="assets/css/magic-cursor.min.css">
+    
+    <!-- Non-critical styles - load async -->
+    <link rel="stylesheet" href="assets/css/unicons.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/unicons.min.css"></noscript>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/swiper-bundle.min.css"></noscript>
+    <link rel="stylesheet" href="assets/css/prettify.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/prettify.min.css"></noscript>
+    <link rel="stylesheet" href="assets/css/magic-cursor.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/magic-cursor.min.css"></noscript>
 
     <!-- include main style -->
     <link rel="stylesheet" href="assets/scss/theme/main.scss">
     <link rel="stylesheet" href="assets/scss/theme/theme-five.scss">
 
-    <!-- include scripts -->
-    <script src="assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+    <!-- include scripts - defer for non-critical -->
+    <script defer src="assets/js/uni-core/js/uni-core-bundle.min.js"></script>
 </head>
 
 <body class="uni-body panel uni-body panel bg-tertiary-800 text-tertiary-200 overflow-x-hidden disable-cursor uc-dark">
@@ -1186,7 +1191,7 @@
                         <div class="uc-navbar-left">
                             <div class="uc-logo ltr:ms-1 rtl:me-1">
                                 <a class="panel text-none" href="index.html" style="width: 220px;">
-                                    <img src="assets/images/logo.png" alt="Moje Blesk AI" style="height: 70px; width: auto;">
+                                    <img src="assets/images/logo.png" alt="Moje Blesk AI" style="height: 70px; width: auto;" fetchpriority="high" width="220" height="70">
                                 </a>
                             </div>
                         </div>
@@ -1916,7 +1921,7 @@
                             <!-- Logo -->
                             <div class="footer-logo">
                                 <a class="panel text-none" href="index.html">
-                                    <img src="assets/images/logo.png" alt="Moje Blesk AI" style="height: 50px; width: auto;">
+                                    <img src="assets/images/logo.png" alt="Moje Blesk AI" style="height: 50px; width: auto;" loading="lazy" width="157" height="50">
                                 </a>
                             </div>
                             
@@ -1994,7 +1999,7 @@
     <script>
         (function() {
             // Default phrases - will be overwritten by translation system
-            window.typingPhrases = ['grow your business', 'drive results', 'convert visitors'];
+            window.typingPhrases = ['work smarter', 'drive results', 'convert visitors'];
             const typingSpeed = 80;
             const deletingSpeed = 50;
             const delayBetweenPhrases = 1500;

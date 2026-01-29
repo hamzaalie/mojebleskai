@@ -1,6 +1,6 @@
-/* Import: Inter */
+/* Import: Inter - with display=swap for FOUT prevention */
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=Inter:wght@300..700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Product+Sans:300,400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@300;400;500;700&display=swap');
 
 /* Import: Graphik */
 @font-face {
