@@ -178,6 +178,48 @@
         body{margin:0;font-family:system-ui,-apple-system,sans-serif}
         .uni-body{overflow-x:hidden}
         .preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:#1a1a2e;display:flex;align-items:center;justify-content:center}
+        
+        /* Mobile-specific fixes */
+        @media (max-width: 767px) {
+            /* Hero section - add top padding, reduce bottom space */
+            .hero-header .section-outer {
+                padding-top: 100px !important;
+                padding-bottom: 2rem !important;
+                min-height: auto !important;
+            }
+            .hero-header .section-inner .panel.vstack {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            /* Pricing cards - smaller padding, better fit */
+            .pricing-card {
+                padding: 0.75rem !important;
+            }
+            .pricing-card .cstack.w-56px {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            .pricing-card .fw-bold.fs-5 {
+                font-size: 0.9rem !important;
+            }
+            .pricing-card .fs-7 {
+                font-size: 0.7rem !important;
+            }
+            .pricing-card ul.nav-y {
+                gap: 0.25rem !important;
+            }
+            .pricing-card hr {
+                margin: 0.5rem 0 !important;
+            }
+            .pricing-card .btn-sm {
+                padding: 0.35rem 0.5rem !important;
+                font-size: 0.7rem !important;
+            }
+            .pricing-card .position-absolute.top-0 {
+                font-size: 0.6rem !important;
+                padding: 0.15rem 0.5rem !important;
+            }
+        }
     </style>
 
     <!-- Deferred Google Analytics - loads after page -->
@@ -1247,7 +1289,7 @@
 
         <!-- Section start -->
         <div id="hero_header" class="hero-header section panel overflow-hidden">
-            <div class="section-outer py-6 lg:py-8 xl:py-10 min-h-700px">
+            <div class="section-outer py-4 lg:py-8 xl:py-10 min-h-700px">
                 <div class="w-750px h-750px position-absolute top-50 start-50 translate-middle rounded-circle border border-dashed border-tertiary-100 dark:border-tertiary-600"></div>
                 <div class="w-1000px h-1000px position-absolute top-50 start-50 translate-middle rounded-circle border border-dashed border-tertiary-100 dark:border-tertiary-600"></div>
                 <div class="w-1280px h-1280px position-absolute top-50 start-50 translate-middle rounded-circle border border-dashed border-tertiary-100 dark:border-tertiary-600"></div>
@@ -1263,7 +1305,7 @@
                             <div class="position-absolute rounded-circle border border-dark dark:border-white dark:border-opacity-15 dark:bg-gradient-45 from-tertiary to-transparent cstack w-64px h-64px d-none lg:d-block" style="top: 75%; right: 21%" data-anime="translateY: [0, 15]; easing: linear; loop: true; direction: alternate; delay: 25;"><span class="rounded-circle bg-primary" style="width: 24px; height: 24px; opacity: 0.8;"></span></div>
                             <div class="position-absolute rounded-circle border border-dark dark:border-white dark:border-opacity-15 dark:bg-gradient-45 from-tertiary to-transparent cstack w-48px h-48px d-none lg:d-block" style="top: 85%; left: 11.5%" data-anime="translateY: [0, 10]; easing: linear; loop: true; direction: alternate; delay: 50;"><span class="rounded-circle bg-primary" style="width: 16px; height: 16px; opacity: 0.8;"></span></div>
                         </div>
-                        <div class="panel vstack items-center gap-2 max-w-md mx-auto text-center px-4 lg:px-0 mt-6" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                        <div class="panel vstack items-center gap-2 max-w-md mx-auto text-center px-4 lg:px-0 mt-4 lg:mt-6" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
                             <span class="fs-7 fw-medium py-narrow px-2 bg-dark text-white dark:bg-primary dark:text-dark rounded-pill" data-i18n="hero.badge">AI-Powered Web Design</span>
                             <h2 class="h2 lg:h1 xl:display-4 m-0 text-center">
                                 <span data-i18n="hero.title">Stunning websites that </span>
@@ -1272,7 +1314,7 @@
                                 </span>
                             </h2>
                             <p class="fs-5 lg:fs-4" data-i18n="hero.subtitle">Transform your vision into a beautiful, high-converting website with AI-powered design.</p>
-                            <div class="panel vstack items-center gap-1 max-w-400px lg:max-w-750px mx-auto text-center mt-2 xl:mt-4 mb-4 lg:mb-6">
+                            <div class="panel vstack items-center gap-1 max-w-400px lg:max-w-750px mx-auto text-center mt-2 xl:mt-4 mb-2 lg:mb-6">
                                 <div>
                                     <a href="#uc-contact-modal" data-uc-toggle class="btn btn-md xl:btn-lg btn-primary border border-dark dark:border-white dark:border-opacity-15 px-3 lg:px-5 w-auto rounded-pill">
                                         <span data-i18n="hero.cta">Get Free Consultation</span>
