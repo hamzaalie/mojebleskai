@@ -224,6 +224,12 @@
     <script defer src="assets/js/uikit-components-bs.js"></script>
     <script defer src="assets/js/app.js"></script>
 
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { inject } from '@vercel/analytics';
+        inject();
+    </script>
+
     <!-- Translation Script -->
     <script>
         const translations = {
