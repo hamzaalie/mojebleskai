@@ -130,8 +130,7 @@
         #process .row > div > .panel,
         #results .row > div > .panel,
         #who-for .row > div > .panel,
-        #pricing .row > div > .panel,
-        #faq .uc-accordion > li {
+        #pricing .row > div > .panel {
             background: linear-gradient(45deg, rgba(27, 70, 81, 0.92), transparent) !important;
             border-color: rgba(255, 255, 255, 0.15) !important;
         }
@@ -156,12 +155,23 @@
             border-color: var(--bs-primary) !important;
             background: linear-gradient(45deg, rgba(24, 141, 114, 0.38), transparent) !important;
         }
-        #faq .uc-accordion-title,
-        #faq .uc-accordion-content {
+        #faq .uc-accordion > li {
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            margin-bottom: 0 !important;
+            padding: 0 !important;
+        }
+        #faq .uc-accordion-title {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+        #faq .uc-accordion-title:hover {
             color: #ffffff !important;
         }
         #faq .uc-accordion-content {
-            opacity: 0.72;
+            color: rgba(255, 255, 255, 0.72) !important;
+            opacity: 1 !important;
         }
     </style>
 
@@ -1284,7 +1294,7 @@
 
                         <!-- FAQ Accordion -->
                         <div class="panel" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
-                            <ul class="uc-accordion uc-accordion-divider gap-4 max-w-md mx-auto" style="--divider-gap: 24px;" data-uc-accordion="targets: > li; multiple: false;">
+                            <ul class="uc-accordion uc-accordion-divider gap-6 max-w-md mx-auto" style="--divider-gap: 48px;" data-uc-accordion="targets: > li; multiple: false;">
                                 <li class="panel uc-open">
                                     <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">How quickly can you deliver my website/app?</a>
                                     <div class="uc-accordion-content lg:fs-5 opacity-70">
