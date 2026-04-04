@@ -1,0 +1,26 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E313A"/>
+      <stop offset="1" stop-color="#09262D"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="400" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F4D53"/>
+      <stop offset="1" stop-color="#153D44"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="180" fill="#B9FF9F" fill-opacity="0.12"/>
+  <rect x="100" y="130" width="460" height="460" rx="28" fill="url(#card)" stroke="#B9FF9F" stroke-opacity="0.25"/>
+  <rect x="150" y="185" width="360" height="18" rx="9" fill="#B9FF9F" fill-opacity="0.35"/>
+  <rect x="150" y="228" width="220" height="16" rx="8" fill="#D5E6E8" fill-opacity="0.5"/>
+  <rect x="150" y="272" width="320" height="12" rx="6" fill="#D5E6E8" fill-opacity="0.28"/>
+  <rect x="150" y="304" width="280" height="12" rx="6" fill="#D5E6E8" fill-opacity="0.2"/>
+  <rect x="150" y="350" width="100" height="100" rx="20" fill="#0B2730"/>
+  <path d="M190 382C190 370 200 360 212 360H216C228 360 238 370 238 382V418C238 430 228 440 216 440H212C200 440 190 430 190 418V382Z" fill="#B9FF9F" fill-opacity="0.25"/>
+  <rect x="270" y="360" width="220" height="16" rx="8" fill="#B9FF9F" fill-opacity="0.45"/>
+  <rect x="270" y="390" width="170" height="12" rx="6" fill="#D5E6E8" fill-opacity="0.35"/>
+  <rect x="270" y="415" width="150" height="12" rx="6" fill="#D5E6E8" fill-opacity="0.22"/>
+  <text x="620" y="305" fill="#E6F2F3" font-family="Arial, sans-serif" font-size="56" font-weight="700">Branding Refresh</text>
+  <text x="620" y="360" fill="#B5C9CC" font-family="Arial, sans-serif" font-size="30">Identity, menu language, and visual consistency</text>
+</svg>

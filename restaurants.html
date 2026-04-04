@@ -377,35 +377,78 @@
         #case-study-feature .case-bullets.result i {
             color: #c7ffb1;
         }
-        #case-study-feature .case-build-grid {
+        #case-study-feature .case-service-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1rem;
+        }
+        #case-study-feature .case-service-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 1rem;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
             align-items: stretch;
         }
-        #case-study-feature .case-build-item {
-            border-radius: 20px;
-            padding: 1rem;
+        #case-study-feature .case-service-row.is-reverse .case-service-content {
+            order: 2;
+        }
+        #case-study-feature .case-service-row.is-reverse .case-service-media {
+            order: 1;
+        }
+        #case-study-feature .case-service-content {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            background: rgba(255, 255, 255, 0.025);
+            padding: 1.15rem;
             display: grid;
-            grid-template-columns: 50px 1fr;
-            gap: 0.85rem;
-            min-height: 128px;
-            height: 100%;
-            transition: transform 220ms ease, border-color 220ms ease;
+            align-content: center;
+            gap: 0.65rem;
         }
-        #case-study-feature .case-build-item:hover {
-            transform: translateY(-2px);
-            border-color: rgba(185, 255, 159, 0.35);
-        }
-        #case-study-feature .case-build-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 15px;
+        #case-study-feature .case-service-kicker {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            background: rgba(185, 255, 159, 0.12);
-            color: var(--bs-primary);
+            width: fit-content;
+            gap: 0.45rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(185, 255, 159, 0.32);
+            background: rgba(185, 255, 159, 0.1);
+            color: #c7ffb1;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        #case-study-feature .case-service-kicker .icon {
+            font-size: 0.9rem;
+        }
+        #case-study-feature .case-service-title {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(1.2rem, 2vw, 1.65rem);
+            line-height: 1.2;
+        }
+        #case-study-feature .case-service-copy {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 58ch;
+        }
+        #case-study-feature .case-service-media {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 260px;
+            background: rgba(0, 0, 0, 0.12);
+        }
+        #case-study-feature .case-service-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         #case-study-feature .case-kpis {
             display: grid;
@@ -435,9 +478,16 @@
             }
         }
         @media (max-width: 767.98px) {
-            #case-study-feature .case-build-grid,
+            #case-study-feature .case-service-row,
             #case-study-feature .case-kpis {
                 grid-template-columns: 1fr;
+            }
+            #case-study-feature .case-service-row.is-reverse .case-service-content,
+            #case-study-feature .case-service-row.is-reverse .case-service-media {
+                order: initial;
+            }
+            #case-study-feature .case-service-media {
+                min-height: 210px;
             }
         }
         .btn-outline-white {
@@ -1419,13 +1469,72 @@
                         <div class="case-build-block panel vstack gap-3" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
                             <span class="case-label build">What We Built</span>
                             <h3 class="h3 m-0 text-white">We rebuilt the full customer journey, not just a website</h3>
-                            <div class="case-build-grid">
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-color-palette"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Branding</h4><p class="fs-7 text-gray-300 m-0">A sharper visual system and menu language to match a premium dining experience.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-laptop"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Website</h4><p class="fs-7 text-gray-300 m-0">A direct-conversion website focused on reservations, orders, and lead capture.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-rocket"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Marketing</h4><p class="fs-7 text-gray-300 m-0">Local SEO, paid ads, and retargeting campaigns to bring guests back consistently.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-layers"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Unique SaaS Idea</h4><p class="fs-7 text-gray-300 m-0">Custom "TablePulse" dashboard predicting no-shows and triggering fill-rate offers by timeslot.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-calendar"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Booking System</h4><p class="fs-7 text-gray-300 m-0">Direct reservations with reminders, table logic, and profile-based guest tracking.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-mobile"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Mobile App</h4><p class="fs-7 text-gray-300 m-0">Loyalty-first app for repeat orders, push campaigns, and one-tap rebooking.</p></div></div>
+                            <div class="case-service-list">
+                                <article class="case-service-row">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-color-palette"></i> Branding</span>
+                                        <h4 class="case-service-title">Branding Refresh</h4>
+                                        <p class="case-service-copy">A sharper visual system and menu language to match a premium dining experience.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="assets/images/case-study/branding-refresh.svg" alt="Branding refresh visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row is-reverse">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-laptop"></i> Website</span>
+                                        <h4 class="case-service-title">Conversion-Led Website</h4>
+                                        <p class="case-service-copy">A direct-conversion website focused on reservations, orders, and lead capture.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="assets/images/case-study/conversion-website.svg" alt="Conversion-focused restaurant website visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-rocket"></i> Marketing</span>
+                                        <h4 class="case-service-title">Marketing Growth Engine</h4>
+                                        <p class="case-service-copy">Local SEO, paid ads, and retargeting campaigns to bring guests back consistently.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="assets/images/case-study/marketing-growth.svg" alt="Restaurant marketing growth engine visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row is-reverse">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-layers"></i> SaaS</span>
+                                        <h4 class="case-service-title">TablePulse SaaS Dashboard</h4>
+                                        <p class="case-service-copy">Custom TablePulse dashboard predicting no-shows and triggering fill-rate offers by timeslot.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="assets/images/case-study/tablepulse-saas.svg" alt="Custom TablePulse SaaS dashboard visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-calendar"></i> Booking</span>
+                                        <h4 class="case-service-title">Direct Booking System</h4>
+                                        <p class="case-service-copy">Direct reservations with reminders, table logic, and profile-based guest tracking.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="assets/images/case-study/booking-system.svg" alt="Restaurant booking system visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row is-reverse">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-mobile"></i> Mobile App</span>
+                                        <h4 class="case-service-title">Loyalty Mobile App</h4>
+                                        <p class="case-service-copy">Loyalty-first app for repeat orders, push campaigns, and one-tap rebooking.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="assets/images/case-study/loyalty-mobile-app.svg" alt="Restaurant loyalty mobile app visual">
+                                    </div>
+                                </article>
                             </div>
                         </div>
 

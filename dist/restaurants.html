@@ -377,35 +377,78 @@
         #case-study-feature .case-bullets.result i {
             color: #c7ffb1;
         }
-        #case-study-feature .case-build-grid {
+        #case-study-feature .case-service-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1rem;
+        }
+        #case-study-feature .case-service-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 1rem;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
             align-items: stretch;
         }
-        #case-study-feature .case-build-item {
-            border-radius: 20px;
-            padding: 1rem;
+        #case-study-feature .case-service-row.is-reverse .case-service-content {
+            order: 2;
+        }
+        #case-study-feature .case-service-row.is-reverse .case-service-media {
+            order: 1;
+        }
+        #case-study-feature .case-service-content {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            background: rgba(255, 255, 255, 0.025);
+            padding: 1.15rem;
             display: grid;
-            grid-template-columns: 50px 1fr;
-            gap: 0.85rem;
-            min-height: 128px;
-            height: 100%;
-            transition: transform 220ms ease, border-color 220ms ease;
+            align-content: center;
+            gap: 0.65rem;
         }
-        #case-study-feature .case-build-item:hover {
-            transform: translateY(-2px);
-            border-color: rgba(185, 255, 159, 0.35);
-        }
-        #case-study-feature .case-build-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 15px;
+        #case-study-feature .case-service-kicker {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            background: rgba(185, 255, 159, 0.12);
-            color: var(--bs-primary);
+            width: fit-content;
+            gap: 0.45rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(185, 255, 159, 0.32);
+            background: rgba(185, 255, 159, 0.1);
+            color: #c7ffb1;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        #case-study-feature .case-service-kicker .icon {
+            font-size: 0.9rem;
+        }
+        #case-study-feature .case-service-title {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(1.2rem, 2vw, 1.65rem);
+            line-height: 1.2;
+        }
+        #case-study-feature .case-service-copy {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            line-height: 1.5;
+            max-width: 58ch;
+        }
+        #case-study-feature .case-service-media {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 260px;
+            background: rgba(0, 0, 0, 0.12);
+        }
+        #case-study-feature .case-service-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         #case-study-feature .case-kpis {
             display: grid;
@@ -435,9 +478,16 @@
             }
         }
         @media (max-width: 767.98px) {
-            #case-study-feature .case-build-grid,
+            #case-study-feature .case-service-row,
             #case-study-feature .case-kpis {
                 grid-template-columns: 1fr;
+            }
+            #case-study-feature .case-service-row.is-reverse .case-service-content,
+            #case-study-feature .case-service-row.is-reverse .case-service-media {
+                order: initial;
+            }
+            #case-study-feature .case-service-media {
+                min-height: 210px;
             }
         }
         .btn-outline-white {
@@ -1417,13 +1467,72 @@
                         <div class="case-build-block panel vstack gap-3" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
                             <span class="case-label build">What We Built</span>
                             <h3 class="h3 m-0 text-white">We rebuilt the full customer journey, not just a website</h3>
-                            <div class="case-build-grid">
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-color-palette"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Branding</h4><p class="fs-7 text-gray-300 m-0">A sharper visual system and menu language to match a premium dining experience.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-laptop"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Website</h4><p class="fs-7 text-gray-300 m-0">A direct-conversion website focused on reservations, orders, and lead capture.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-rocket"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Marketing</h4><p class="fs-7 text-gray-300 m-0">Local SEO, paid ads, and retargeting campaigns to bring guests back consistently.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-layers"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Unique SaaS Idea</h4><p class="fs-7 text-gray-300 m-0">Custom "TablePulse" dashboard predicting no-shows and triggering fill-rate offers by timeslot.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-calendar"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Booking System</h4><p class="fs-7 text-gray-300 m-0">Direct reservations with reminders, table logic, and profile-based guest tracking.</p></div></div>
-                                <div class="case-build-item"><span class="case-build-icon"><i class="icon icon-2 unicon-mobile"></i></span><div class="vstack gap-1"><h4 class="h6 m-0 text-white">Mobile App</h4><p class="fs-7 text-gray-300 m-0">Loyalty-first app for repeat orders, push campaigns, and one-tap rebooking.</p></div></div>
+                            <div class="case-service-list">
+                                <article class="case-service-row">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-color-palette"></i> Branding</span>
+                                        <h4 class="case-service-title">Branding Refresh</h4>
+                                        <p class="case-service-copy">A sharper visual system and menu language to match a premium dining experience.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjAwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjcyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBFMzEzQSIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDkyNjJEIi8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNhcmQiIHgxPSIwIiB5MT0iMCIgeDI9IjQwMCIgeTI9IjI2MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzFGNEQ1MyIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTUzRDQ0Ii8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjYmcpIi8+DQogIDxjaXJjbGUgY3g9IjEwNTAiIGN5PSIxMjAiIHI9IjE4MCIgZmlsbD0iI0I5RkY5RiIgZmlsbC1vcGFjaXR5PSIwLjEyIi8+DQogIDxyZWN0IHg9IjEwMCIgeT0iMTMwIiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjQ2MCIgcng9IjI4IiBmaWxsPSJ1cmwoI2NhcmQpIiBzdHJva2U9IiNCOUZGOUYiIHN0cm9rZS1vcGFjaXR5PSIwLjI1Ii8+DQogIDxyZWN0IHg9IjE1MCIgeT0iMTg1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0I5RkY5RiIgZmlsbC1vcGFjaXR5PSIwLjM1Ii8+DQogIDxyZWN0IHg9IjE1MCIgeT0iMjI4IiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0iI0Q1RTZFOCIgZmlsbC1vcGFjaXR5PSIwLjUiLz4NCiAgPHJlY3QgeD0iMTUwIiB5PSIyNzIiIHdpZHRoPSIzMjAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjRDVFNkU4IiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4NCiAgPHJlY3QgeD0iMTUwIiB5PSIzMDQiIHdpZHRoPSIyODAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjRDVFNkU4IiBmaWxsLW9wYWNpdHk9IjAuMiIvPg0KICA8cmVjdCB4PSIxNTAiIHk9IjM1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzBCMjczMCIvPg0KICA8cGF0aCBkPSJNMTkwIDM4MkMxOTAgMzcwIDIwMCAzNjAgMjEyIDM2MEgyMTZDMjI4IDM2MCAyMzggMzcwIDIzOCAzODJWNDE4QzIzOCA0MzAgMjI4IDQ0MCAyMTYgNDQwSDIxMkMyMDAgNDQwIDE5MCA0MzAgMTkwIDQxOFYzODJaIiBmaWxsPSIjQjlGRjlGIiBmaWxsLW9wYWNpdHk9IjAuMjUiLz4NCiAgPHJlY3QgeD0iMjcwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSIjQjlGRjlGIiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCiAgPHJlY3QgeD0iMjcwIiB5PSIzOTAiIHdpZHRoPSIxNzAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjRDVFNkU4IiBmaWxsLW9wYWNpdHk9IjAuMzUiLz4NCiAgPHJlY3QgeD0iMjcwIiB5PSI0MTUiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjRDVFNkU4IiBmaWxsLW9wYWNpdHk9IjAuMjIiLz4NCiAgPHRleHQgeD0iNjIwIiB5PSIzMDUiIGZpbGw9IiNFNkYyRjMiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1NiIgZm9udC13ZWlnaHQ9IjcwMCI+QnJhbmRpbmcgUmVmcmVzaDwvdGV4dD4NCiAgPHRleHQgeD0iNjIwIiB5PSIzNjAiIGZpbGw9IiNCNUM5Q0MiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCI+SWRlbnRpdHksIG1lbnUgbGFuZ3VhZ2UsIGFuZCB2aXN1YWwgY29uc2lzdGVuY3k8L3RleHQ+DQo8L3N2Zz4=" alt="Branding refresh visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row is-reverse">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-laptop"></i> Website</span>
+                                        <h4 class="case-service-title">Conversion-Led Website</h4>
+                                        <p class="case-service-copy">A direct-conversion website focused on reservations, orders, and lead capture.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjAwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjcyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBCMkQzNiIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDgyMzJCIi8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjYmcpIi8+DQogIDxyZWN0IHg9IjExMCIgeT0iOTAiIHdpZHRoPSI2MjAiIGhlaWdodD0iNTQwIiByeD0iMzAiIGZpbGw9IiMxMjNDNDQiIHN0cm9rZT0iI0I5RkY5RiIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4NCiAgPHJlY3QgeD0iMTUwIiB5PSIxMzUiIHdpZHRoPSI1NDAiIGhlaWdodD0iNDAiIHJ4PSIxMiIgZmlsbD0iIzBEMkYzNyIvPg0KICA8Y2lyY2xlIGN4PSIxNzYiIGN5PSIxNTUiIHI9IjgiIGZpbGw9IiNCOUZGOUYiIGZpbGwtb3BhY2l0eT0iMC41Ii8+DQogIDxjaXJjbGUgY3g9IjIwMiIgY3k9IjE1NSIgcj0iOCIgZmlsbD0iI0I5RkY5RiIgZmlsbC1vcGFjaXR5PSIwLjI4Ii8+DQogIDxjaXJjbGUgY3g9IjIyOCIgY3k9IjE1NSIgcj0iOCIgZmlsbD0iI0I5RkY5RiIgZmlsbC1vcGFjaXR5PSIwLjIiLz4NCiAgPHJlY3QgeD0iMTUwIiB5PSIyMDgiIHdpZHRoPSIyNzAiIGhlaWdodD0iMTcwIiByeD0iMTgiIGZpbGw9IiMwRTMxM0EiLz4NCiAgPHJlY3QgeD0iNDQwIiB5PSIyMDgiIHdpZHRoPSIyNTAiIGhlaWdodD0iNzgiIHJ4PSIxNiIgZmlsbD0iIzE5NDg1MCIvPg0KICA8cmVjdCB4PSI0NDAiIHk9IjMwMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSI3OCIgcng9IjE2IiBmaWxsPSIjMTk0ODUwIi8+DQogIDxyZWN0IHg9IjE1MCIgeT0iNDAyIiB3aWR0aD0iNTQwIiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9IiNCOUZGOUYiIGZpbGwtb3BhY2l0eT0iMC40MiIvPg0KICA8cmVjdCB4PSIxNTAiIHk9IjQ0MCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9IiNENUU2RTgiIGZpbGwtb3BhY2l0eT0iMC4zNSIvPg0KICA8cmVjdCB4PSIxNTAiIHk9IjQ3MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9IiNENUU2RTgiIGZpbGwtb3BhY2l0eT0iMC4yNSIvPg0KICA8cmVjdCB4PSIxNTAiIHk9IjUxNSIgd2lkdGg9IjE5MCIgaGVpZ2h0PSI1NiIgcng9IjI4IiBmaWxsPSIjQjlGRjlGIiBmaWxsLW9wYWNpdHk9IjAuMyIvPg0KICA8dGV4dCB4PSI3ODAiIHk9IjMwMCIgZmlsbD0iI0U2RjJGMyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIj5XZWJzaXRlPC90ZXh0Pg0KICA8dGV4dCB4PSI3ODAiIHk9IjM1MiIgZmlsbD0iI0I1QzlDQyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIj5CdWlsdCB0byBjb252ZXJ0IHRyYWZmaWMgaW50bzwvdGV4dD4NCiAgPHRleHQgeD0iNzgwIiB5PSIzOTIiIGZpbGw9IiNCNUM5Q0MiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCI+Ym9va2luZ3MsIG9yZGVycywgYW5kIGxlYWRzPC90ZXh0Pg0KPC9zdmc+" alt="Conversion-focused restaurant website visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-rocket"></i> Marketing</span>
+                                        <h4 class="case-service-title">Marketing Growth Engine</h4>
+                                        <p class="case-service-copy">Local SEO, paid ads, and retargeting campaigns to bring guests back consistently.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjAwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjcyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBDMzAzOCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDgyNjJFIi8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjYmcpIi8+DQogIDxyZWN0IHg9IjEzMCIgeT0iMTEwIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjUwMCIgcng9IjMwIiBmaWxsPSIjMTIzRDQ1IiBzdHJva2U9IiNCOUZGOUYiIHN0cm9rZS1vcGFjaXR5PSIwLjIiLz4NCiAgPHBhdGggZD0iTTE4MCA1MDBDMjQwIDQzMCAzMDAgNDIwIDM2MCAzNjBDNDMwIDI5MCA1MDAgMzAwIDU2MCAyMjAiIHN0cm9rZT0iI0I5RkY5RiIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjE4MCIgY3k9IjUwMCIgcj0iMTQiIGZpbGw9IiNCOUZGOUYiLz4NCiAgPGNpcmNsZSBjeD0iMzYwIiBjeT0iMzYwIiByPSIxNCIgZmlsbD0iI0I5RkY5RiIvPg0KICA8Y2lyY2xlIGN4PSI1NjAiIGN5PSIyMjAiIHI9IjE0IiBmaWxsPSIjQjlGRjlGIi8+DQogIDxyZWN0IHg9IjE5MCIgeT0iNTQwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iI0Q1RTZFOCIgZmlsbC1vcGFjaXR5PSIwLjM1Ii8+DQogIDxyZWN0IHg9IjE5MCIgeT0iNTY1IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iI0Q1RTZFOCIgZmlsbC1vcGFjaXR5PSIwLjI1Ii8+DQogIDxyZWN0IHg9Ijc2MCIgeT0iMjIwIiB3aWR0aD0iMzIwIiBoZWlnaHQ9Ijg2IiByeD0iMjAiIGZpbGw9IiMxNzQ3NTAiLz4NCiAgPHJlY3QgeD0iNzYwIiB5PSIzMzIiIHdpZHRoPSIzMjAiIGhlaWdodD0iODYiIHJ4PSIyMCIgZmlsbD0iIzE3NDc1MCIvPg0KICA8cmVjdCB4PSI3NjAiIHk9IjQ0NCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSI4NiIgcng9IjIwIiBmaWxsPSIjMTc0NzUwIi8+DQogIDx0ZXh0IHg9Ijc2MCIgeT0iMTg1IiBmaWxsPSIjRTZGMkYzIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZvbnQtd2VpZ2h0PSI3MDAiPk1hcmtldGluZyBFbmdpbmU8L3RleHQ+DQogIDx0ZXh0IHg9IjgwMiIgeT0iMjc1IiBmaWxsPSIjQjlGRjlGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiPkxvY2FsIFNFTzwvdGV4dD4NCiAgPHRleHQgeD0iODAyIiB5PSIzODciIGZpbGw9IiNCOUZGOUYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjcwMCI+UGFpZCBDYW1wYWlnbnM8L3RleHQ+DQogIDx0ZXh0IHg9IjgwMiIgeT0iNDk5IiBmaWxsPSIjQjlGRjlGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiPlJldGFyZ2V0aW5nPC90ZXh0Pg0KPC9zdmc+" alt="Restaurant marketing growth engine visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row is-reverse">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-layers"></i> SaaS</span>
+                                        <h4 class="case-service-title">TablePulse SaaS Dashboard</h4>
+                                        <p class="case-service-copy">Custom TablePulse dashboard predicting no-shows and triggering fill-rate offers by timeslot.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjAwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjcyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBBMkMzNCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDgyMTI5Ii8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjYmcpIi8+DQogIDxyZWN0IHg9IjEwMCIgeT0iMTAwIiB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI1MjAiIHJ4PSIzMiIgZmlsbD0iIzEwM0I0NCIgc3Ryb2tlPSIjQjlGRjlGIiBzdHJva2Utb3BhY2l0eT0iMC4yNSIvPg0KICA8cmVjdCB4PSIxNDUiIHk9IjE0NSIgd2lkdGg9IjMwMCIgaGVpZ2h0PSI0MzAiIHJ4PSIyMiIgZmlsbD0iIzBDMzEzOSIvPg0KICA8cmVjdCB4PSIxNzUiIHk9IjE5MCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9IiNCOUZGOUYiIGZpbGwtb3BhY2l0eT0iMC40Ii8+DQogIDxyZWN0IHg9IjE3NSIgeT0iMjI1IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0iI0Q1RTZFOCIgZmlsbC1vcGFjaXR5PSIwLjMiLz4NCiAgPHJlY3QgeD0iMTc1IiB5PSIyNzUiIHdpZHRoPSIyNDAiIGhlaWdodD0iNzgiIHJ4PSIxNCIgZmlsbD0iIzFCNEE1MiIvPg0KICA8cmVjdCB4PSIxNzUiIHk9IjM3MCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSI3OCIgcng9IjE0IiBmaWxsPSIjMUI0QTUyIi8+DQogIDxyZWN0IHg9IjE3NSIgeT0iNDY1IiB3aWR0aD0iMjQwIiBoZWlnaHQ9Ijc4IiByeD0iMTQiIGZpbGw9IiMxQjRBNTIiLz4NCiAgPHJlY3QgeD0iNDcwIiB5PSIxNDUiIHdpZHRoPSI1ODUiIGhlaWdodD0iMjQwIiByeD0iMjIiIGZpbGw9IiMwQzMxMzkiLz4NCiAgPHJlY3QgeD0iNTAwIiB5PSIxODUiIHdpZHRoPSIyMjAiIGhlaWdodD0iMTQiIHJ4PSI3IiBmaWxsPSIjRDVFNkU4IiBmaWxsLW9wYWNpdHk9IjAuMyIvPg0KICA8cmVjdCB4PSI1MDAiIHk9IjIxNSIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNENUU2RTgiIGZpbGwtb3BhY2l0eT0iMC4yIi8+DQogIDxyZWN0IHg9IjUwMCIgeT0iMjYyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjkwIiByeD0iMTYiIGZpbGw9IiMxNzQ4NTAiLz4NCiAgPHBhdGggZD0iTTU0NSAzMjVMNjEwIDI5Mkw2OTAgMzE4TDc2MCAyNzZMODQwIDMwNkw5MjAgMjUyIiBzdHJva2U9IiNCOUZGOUYiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxyZWN0IHg9IjQ3MCIgeT0iNDA1IiB3aWR0aD0iNTg1IiBoZWlnaHQ9IjE3MCIgcng9IjIyIiBmaWxsPSIjMEMzMTM5Ii8+DQogIDx0ZXh0IHg9IjUwNSIgeT0iNDU1IiBmaWxsPSIjQjlGRjlGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzIiIGZvbnQtd2VpZ2h0PSI3MDAiPlRhYmxlUHVsc2UgU2FhUzwvdGV4dD4NCiAgPHRleHQgeD0iNTA1IiB5PSI1MDIiIGZpbGw9IiNENUU2RTgiIGZpbGwtb3BhY2l0eT0iMC44IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiPk5vLXNob3cgcHJlZGljdGlvbiArIGZpbGwtcmF0ZSBhdXRvbWF0aW9uPC90ZXh0Pg0KPC9zdmc+" alt="Custom TablePulse SaaS dashboard visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-calendar"></i> Booking</span>
+                                        <h4 class="case-service-title">Direct Booking System</h4>
+                                        <p class="case-service-copy">Direct reservations with reminders, table logic, and profile-based guest tracking.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjAwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjcyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBEMkYzNyIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDgyNjJFIi8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjYmcpIi8+DQogIDxyZWN0IHg9IjEzMCIgeT0iODAiIHdpZHRoPSI0NTAiIGhlaWdodD0iNTYwIiByeD0iMzQiIGZpbGw9IiMxMjNFNDciIHN0cm9rZT0iI0I5RkY5RiIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4NCiAgPHJlY3QgeD0iMTgwIiB5PSIxNTAiIHdpZHRoPSIzNTAiIGhlaWdodD0iNzAiIHJ4PSIxNiIgZmlsbD0iIzFBNEE1MyIvPg0KICA8cmVjdCB4PSIxODAiIHk9IjI1MCIgd2lkdGg9IjM1MCIgaGVpZ2h0PSIzMjAiIHJ4PSIyMCIgZmlsbD0iIzBEMzEzOSIvPg0KICA8ZyBmaWxsPSIjQjlGRjlGIiBmaWxsLW9wYWNpdHk9IjAuNCI+DQogICAgPHJlY3QgeD0iMjEwIiB5PSIyODUiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMjY4IiB5PSIyODUiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMzI2IiB5PSIyODUiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMzg0IiB5PSIyODUiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iNDQyIiB5PSIyODUiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMjEwIiB5PSIzNDMiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMjY4IiB5PSIzNDMiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMzI2IiB5PSIzNDMiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iMzg0IiB5PSIzNDMiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogICAgPHJlY3QgeD0iNDQyIiB5PSIzNDMiIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgcng9IjEwIi8+DQogIDwvZz4NCiAgPHJlY3QgeD0iNjgwIiB5PSIxNzAiIHdpZHRoPSIzOTAiIGhlaWdodD0iMTIwIiByeD0iMjAiIGZpbGw9IiMxNzRBNTMiLz4NCiAgPHJlY3QgeD0iNjgwIiB5PSIzMjAiIHdpZHRoPSIzOTAiIGhlaWdodD0iMTIwIiByeD0iMjAiIGZpbGw9IiMxNzRBNTMiLz4NCiAgPHJlY3QgeD0iNjgwIiB5PSI0NzAiIHdpZHRoPSIzOTAiIGhlaWdodD0iMTIwIiByeD0iMjAiIGZpbGw9IiMxNzRBNTMiLz4NCiAgPHRleHQgeD0iNjgwIiB5PSIxMzAiIGZpbGw9IiNFNkYyRjMiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MiIgZm9udC13ZWlnaHQ9IjcwMCI+Qm9va2luZyBTeXN0ZW08L3RleHQ+DQogIDx0ZXh0IHg9IjcyMCIgeT0iMjQ1IiBmaWxsPSIjQjlGRjlGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiPlNtYXJ0IENhcGFjaXR5PC90ZXh0Pg0KICA8dGV4dCB4PSI3MjAiIHk9IjM5NSIgZmlsbD0iI0I5RkY5RiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIj5SZW1pbmRlciBGbG93czwvdGV4dD4NCiAgPHRleHQgeD0iNzIwIiB5PSI1NDUiIGZpbGw9IiNCOUZGOUYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCI+R3Vlc3QgUHJvZmlsZXM8L3RleHQ+DQo8L3N2Zz4=" alt="Restaurant booking system visual">
+                                    </div>
+                                </article>
+
+                                <article class="case-service-row is-reverse">
+                                    <div class="case-service-content">
+                                        <span class="case-service-kicker"><i class="icon unicon-mobile"></i> Mobile App</span>
+                                        <h4 class="case-service-title">Loyalty Mobile App</h4>
+                                        <p class="case-service-copy">Loyalty-first app for repeat orders, push campaigns, and one-tap rebooking.</p>
+                                    </div>
+                                    <div class="case-service-media">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjAwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjcyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBCMkMzNCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDgyMzJCIi8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgPC9kZWZzPg0KICA8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjYmcpIi8+DQogIDxyZWN0IHg9IjE5MCIgeT0iOTAiIHdpZHRoPSIzMDAiIGhlaWdodD0iNTQwIiByeD0iNDQiIGZpbGw9IiMxMjNFNDciIHN0cm9rZT0iI0I5RkY5RiIgc3Ryb2tlLW9wYWNpdHk9IjAuMjQiLz4NCiAgPHJlY3QgeD0iMjIwIiB5PSIxNDUiIHdpZHRoPSIyNDAiIGhlaWdodD0iNDMwIiByeD0iMjYiIGZpbGw9IiMwRTMyM0EiLz4NCiAgPHJlY3QgeD0iMjQ1IiB5PSIxODUiIHdpZHRoPSIxOTAiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSIjQjlGRjlGIiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCiAgPHJlY3QgeD0iMjQ1IiB5PSIyMTUiIHdpZHRoPSIxMzAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjRDVFNkU4IiBmaWxsLW9wYWNpdHk9IjAuMyIvPg0KICA8cmVjdCB4PSIyNDUiIHk9IjI1NSIgd2lkdGg9IjE5MCIgaGVpZ2h0PSIxMDAiIHJ4PSIxOCIgZmlsbD0iIzFBNEE1MyIvPg0KICA8cmVjdCB4PSIyNDUiIHk9IjM3MiIgd2lkdGg9IjE5MCIgaGVpZ2h0PSIxMDAiIHJ4PSIxOCIgZmlsbD0iIzFBNEE1MyIvPg0KICA8cmVjdCB4PSIyNDUiIHk9IjQ5MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSI1MiIgcng9IjI2IiBmaWxsPSIjQjlGRjlGIiBmaWxsLW9wYWNpdHk9IjAuMzIiLz4NCiAgPHJlY3QgeD0iNTYwIiB5PSIxMzAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMTYwIiByeD0iMjIiIGZpbGw9IiMxNDNGNDgiLz4NCiAgPHJlY3QgeD0iNTYwIiB5PSIzMjAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMTYwIiByeD0iMjIiIGZpbGw9IiMxNDNGNDgiLz4NCiAgPHJlY3QgeD0iNTYwIiB5PSI1MTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMTEwIiByeD0iMjIiIGZpbGw9IiMxNDNGNDgiLz4NCiAgPHRleHQgeD0iNTYwIiB5PSI5OCIgZmlsbD0iI0U2RjJGMyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIj5Mb3lhbHR5IE1vYmlsZSBBcHA8L3RleHQ+DQogIDx0ZXh0IHg9IjYwMCIgeT0iMjI1IiBmaWxsPSIjQjlGRjlGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiPk9uZS10YXAgUmVvcmRlcjwvdGV4dD4NCiAgPHRleHQgeD0iNjAwIiB5PSI0MTUiIGZpbGw9IiNCOUZGOUYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCI+UHVzaCBDYW1wYWlnbnM8L3RleHQ+DQogIDx0ZXh0IHg9IjYwMCIgeT0iNTc1IiBmaWxsPSIjQjlGRjlGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiPlBvaW50cyArIFJld2FyZHM8L3RleHQ+DQo8L3N2Zz4=" alt="Restaurant loyalty mobile app visual">
+                                    </div>
+                                </article>
                             </div>
                         </div>
 
