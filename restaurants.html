@@ -255,11 +255,38 @@
         }
         #case-study-feature .case-intro-strip,
         #case-study-feature .case-problem-block,
+        #case-study-feature .case-build-block,
         #case-study-feature .case-results-block,
         #case-study-feature .case-build-item,
         #case-study-feature .case-kpi {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.11);
+        }
+        #case-study-feature .case-feature-pill {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.46rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(185, 255, 159, 0.45);
+            background: linear-gradient(90deg, rgba(185, 255, 159, 0.24), rgba(185, 255, 159, 0.08));
+            color: #d9ffcb;
+            box-shadow: 0 0 0 1px rgba(185, 255, 159, 0.08) inset;
+        }
+        #case-study-feature .case-feature-pill::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #d9ffcb;
+            box-shadow: 0 0 0 6px rgba(185, 255, 159, 0.14);
+        }
+        #case-study-feature .case-headline {
+            letter-spacing: -0.02em;
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
         }
         #case-study-feature .case-intro-strip {
             border-radius: 24px;
@@ -267,9 +294,41 @@
             background: linear-gradient(90deg, rgba(185, 255, 159, 0.12), rgba(255, 255, 255, 0.02));
         }
         #case-study-feature .case-problem-block,
+        #case-study-feature .case-build-block,
+        #case-study-feature .case-results-block {
+            position: relative;
+            overflow: hidden;
+        }
+        #case-study-feature .case-problem-block::before,
+        #case-study-feature .case-build-block::before,
+        #case-study-feature .case-results-block::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(185, 255, 159, 0.8), rgba(185, 255, 159, 0));
+            pointer-events: none;
+        }
+        #case-study-feature .case-problem-block,
         #case-study-feature .case-results-block {
             border-radius: 24px;
             padding: 1.35rem;
+        }
+        #case-study-feature .case-build-block {
+            border-radius: 24px;
+            padding: 1.35rem;
+        }
+        #case-study-feature .case-problem-block {
+            margin-right: 4%;
+        }
+        #case-study-feature .case-build-block {
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        #case-study-feature .case-results-block {
+            margin-left: 4%;
         }
         #case-study-feature .case-label {
             display: inline-flex;
@@ -281,18 +340,22 @@
             font-weight: 700;
             letter-spacing: 0.04em;
             text-transform: uppercase;
+            border: 1px solid transparent;
         }
         #case-study-feature .case-label.problem {
             color: #ff9898;
             background: rgba(255, 91, 91, 0.12);
+            border-color: rgba(255, 91, 91, 0.35);
         }
         #case-study-feature .case-label.build {
             color: #c7ffb1;
             background: rgba(185, 255, 159, 0.12);
+            border-color: rgba(185, 255, 159, 0.35);
         }
         #case-study-feature .case-label.result {
             color: #9de7ff;
             background: rgba(82, 205, 255, 0.12);
+            border-color: rgba(82, 205, 255, 0.35);
         }
         #case-study-feature .case-bullets {
             display: grid;
@@ -323,6 +386,11 @@
             grid-template-columns: 50px 1fr;
             gap: 0.85rem;
             min-height: 120px;
+            transition: transform 220ms ease, border-color 220ms ease;
+        }
+        #case-study-feature .case-build-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(185, 255, 159, 0.35);
         }
         #case-study-feature .case-build-icon {
             width: 50px;
@@ -351,6 +419,12 @@
             color: rgba(255, 255, 255, 0.86);
         }
         @media (max-width: 991.98px) {
+            #case-study-feature .case-problem-block,
+            #case-study-feature .case-build-block,
+            #case-study-feature .case-results-block {
+                margin-left: 0;
+                margin-right: 0;
+            }
             #case-study-feature .case-build-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -1306,8 +1380,8 @@
                     <div class="section-inner panel vstack gap-6">
 
                         <div class="panel vstack items-center gap-2 max-w-850px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
-                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Featured Case Study</span>
-                            <h2 class="h3 lg:h2 m-0 text-white">
+                            <span class="case-feature-pill fs-7 fw-medium">Featured Case Study</span>
+                            <h2 class="case-headline h3 lg:h2 m-0 text-white">
                                 A Restaurant Rebuild Told as a <span class="text-primary">Transformation Story</span>
                             </h2>
                             <p class="fs-6 text-gray-300 max-w-750px">Instead of another generic before-and-after card, this case study walks through the actual journey: what was broken, what we built, and what changed in the business.</p>
@@ -1340,7 +1414,7 @@
                             </div>
                         </div>
 
-                        <div class="panel vstack gap-3" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
+                        <div class="case-build-block panel vstack gap-3" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
                             <span class="case-label build">What We Built</span>
                             <h3 class="h3 m-0 text-white">We rebuilt the full customer journey, not just a website</h3>
                             <div class="case-build-grid">
