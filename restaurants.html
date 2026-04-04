@@ -341,6 +341,7 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
             border: 1px solid transparent;
+            align-self: flex-start;
         }
         #case-study-feature .case-label.problem {
             color: #ff9898;
@@ -376,8 +377,9 @@
         }
         #case-study-feature .case-build-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1rem;
+            align-items: stretch;
         }
         #case-study-feature .case-build-item {
             border-radius: 20px;
@@ -385,7 +387,8 @@
             display: grid;
             grid-template-columns: 50px 1fr;
             gap: 0.85rem;
-            min-height: 120px;
+            min-height: 128px;
+            height: 100%;
             transition: transform 220ms ease, border-color 220ms ease;
         }
         #case-study-feature .case-build-item:hover {
@@ -404,12 +407,14 @@
         }
         #case-study-feature .case-kpis {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 0.9rem;
+            align-items: stretch;
         }
         #case-study-feature .case-kpi {
             border-radius: 18px;
             padding: 1rem;
+            height: 100%;
         }
         #case-study-feature .case-quote {
             border-left: 3px solid var(--bs-primary);
@@ -424,12 +429,6 @@
             #case-study-feature .case-results-block {
                 margin-left: 0;
                 margin-right: 0;
-            }
-            #case-study-feature .case-build-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            #case-study-feature .case-kpis {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
         @media (max-width: 767.98px) {
@@ -1451,239 +1450,11 @@
             </div>
         </div>
 
-        <!-- SECTION 7: WHO THIS IS FOR -->
-        <div id="who-for" class="section panel overflow-hidden bg-tertiary-800">
-            <div class="section-outer panel py-6 lg:py-8 xl:py-10">
-                <div class="container">
-                    <div class="section-inner panel vstack gap-6">
-                        
-                        <!-- Section Header -->
-                        <div class="panel vstack items-center gap-2 max-w-750px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
-                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Qualification</span>
-                            <h2 class="h3 lg:h2 m-0 text-white">
-                                Is This Right For Your Restaurant?<br>
-                                <span class="text-primary">Here's The Honest Answer</span>
-                            </h2>
-                            <p class="fs-6 text-gray-300 max-w-650px">We do our best work with operators who want a real growth system, not a cheap one-week patch.</p>
-                        </div>
+        <!-- SECTION 7: WHO THIS IS FOR (DISABLED - COMMENTED OUT PER REQUEST) -->
+        <!-- Qualification section hidden. -->
 
-                        <div class="row child-cols-12 lg:child-cols-6 g-6 col-match">
-
-                            <!-- Perfect Fit -->
-                            <div>
-                                <div class="qualification-card is-fit panel p-5 lg:p-6 h-100 rounded-2" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
-                                    <div class="vstack gap-4 lg:gap-5">
-                                        <div class="vstack gap-3">
-                                            <span class="qualification-label is-fit">Best Fit</span>
-                                            <div class="hstack gap-3 items-center">
-                                                <div class="cstack w-64px h-64px rounded-circle bg-primary text-dark flex-shrink-0">
-                                                    <i class="icon icon-2 unicon-checkmark"></i>
-                                                </div>
-                                                <div class="vstack gap-1">
-                                                    <h3 class="h4 m-0 text-white">This Is For You If</h3>
-                                                    <p class="fs-6 text-gray-300 m-0">You want to own the customer relationship, reduce third-party dependence, and build long-term restaurant value.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="qualification-items">
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-cart"></i></span><span class="qualification-item-text">You're tired of losing 25-30% to delivery apps</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-locked"></i></span><span class="qualification-item-text">You want full control of your customer data</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-growth"></i></span><span class="qualification-item-text">You're ready to invest in long-term growth</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-certificate"></i></span><span class="qualification-item-text">You value quality over the cheapest option</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-chart-line-data"></i></span><span class="qualification-item-text">You're doing €10K+ monthly revenue</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-partnership"></i></span><span class="qualification-item-text">You want a tech partner, not just a vendor</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-idea"></i></span><span class="qualification-item-text">You're open to new technology and innovation</span></div>
-                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-time"></i></span><span class="qualification-item-text">You understand that digital transformation takes time</span></div>
-                                        </div>
-                                        <div class="panel-note">You do not need to be perfect. You just need to be serious about fixing the leaks and building the right system.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Not a Fit -->
-                            <div>
-                                <div class="qualification-card not-fit panel p-5 lg:p-6 h-100 rounded-2" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
-                                    <div class="vstack gap-4 lg:gap-5">
-                                        <div class="vstack gap-3">
-                                            <span class="qualification-label not-fit">Not A Match</span>
-                                            <div class="hstack gap-3 items-center">
-                                                <div class="cstack w-64px h-64px rounded-circle bg-danger bg-opacity-15 text-danger flex-shrink-0">
-                                                    <i class="icon icon-2 unicon-close"></i>
-                                                </div>
-                                                <div class="vstack gap-1">
-                                                    <h3 class="h4 m-0 text-white">This Is Not For You If</h3>
-                                                    <p class="fs-6 text-gray-300 m-0">We are not the right fit if you're looking for the cheapest possible build with no strategy, no commitment, and no patience.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="qualification-items">
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-laptop"></i></span><span class="qualification-item-text">You just want a basic €500 template website</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-stop"></i></span><span class="qualification-item-text">You're not willing to invest in your business</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-lightning"></i></span><span class="qualification-item-text">You expect results without putting in any effort</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-chart-line-data"></i></span><span class="qualification-item-text">You're doing less than €5K monthly revenue</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-tag"></i></span><span class="qualification-item-text">You want the cheapest option available</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-close"></i></span><span class="qualification-item-text">You're not serious about growing</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-time"></i></span><span class="qualification-item-text">You need something built "yesterday"</span></div>
-                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-split"></i></span><span class="qualification-item-text">You're resistant to change and new systems</span></div>
-                                        </div>
-                                        <div class="panel-note">If you need a low-effort, lowest-cost shortcut, we would rather be honest now than disappoint you later.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- CTA -->
-                        <div class="panel text-center" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 400;">
-                            <p class="fs-5 text-white mb-3">If you're nodding your head to the ✅ list...</p>
-                            <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary px-6 rounded-pill">
-                                Let's Talk - Book Your Call <i class="icon icon-1 unicon-arrow-right ms-1"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SECTION 7: PRICING -->
-        <div id="pricing" class="section panel overflow-hidden bg-tertiary-700">
-            <div class="section-outer panel py-6 lg:py-8 xl:py-10">
-                <div class="container">
-                    <div class="section-inner panel vstack gap-6">
-                        
-                        <!-- Section Header -->
-                        <div class="panel vstack items-center gap-2 max-w-750px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
-                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Investment</span>
-                            <h2 class="h3 lg:h2 m-0 text-white">
-                                Transparent Pricing<br>
-                                <span class="text-primary">No Hidden Fees. No Surprises.</span>
-                            </h2>
-                            <p class="fs-6 text-gray-300">Choose the package that fits your restaurant's goals</p>
-                        </div>
-
-                        <!-- Pricing Tiers -->
-                        <div class="row child-cols-12 lg:child-cols-4 g-4 lg:g-6 col-match">
-
-                            <!-- Starter Package -->
-                            <div>
-                                <div class="panel p-5 lg:p-6 h-100 bg-tertiary-800 border border-gray-700 rounded-2 hover:border-primary transition-all duration-300" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 100;">
-                                    <div class="vstack gap-4 h-100">
-                                        <div>
-                                            <h3 class="h6 text-gray-400 m-0">Starter</h3>
-                                            <div class="hstack gap-2 items-end mt-2">
-                                                <span class="h2 lg:h1 m-0 text-white">€2,500</span>
-                                                <span class="fs-6 text-gray-400 mb-2">one-time</span>
-                                            </div>
-                                            <p class="fs-7 text-gray-400 mt-2">Perfect for new restaurants or single locations</p>
-                                        </div>
-                                        <div class="vstack gap-2 flex-1">
-                                            <span class="fs-6 fw-medium text-white mb-1">What's Included:</span>
-                                            <ul class="vstack gap-2 fs-6 text-gray-300 m-0 ps-0 list-none">
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Custom 5-page website</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Mobile responsive design</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Basic SEO optimization</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Contact form integration</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Google Maps integration</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Digital menu display</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>2 weeks delivery</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>2 rounds of revisions</span></li>
-                                            </ul>
-                                        </div>
-                                        <a href="#uc-contact-modal" data-uc-toggle class="btn btn-outline-white btn-md w-100 rounded-pill">
-                                            Get Started <i class="icon icon-1 unicon-arrow-right ms-1"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Professional Package (Most Popular) -->
-                            <div>
-                                <div class="panel p-5 lg:p-6 h-100 bg-primary text-dark rounded-2 position-relative" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
-                                    <span class="position-absolute top-0 start-50 translate-middle badge bg-dark text-white px-3 py-1 fs-7 fw-bold rounded-pill">MOST POPULAR</span>
-                                    <div class="vstack gap-4 h-100">
-                                        <div>
-                                            <h3 class="h6 text-dark text-opacity-70 m-0">Professional</h3>
-                                            <div class="hstack gap-2 items-end mt-2">
-                                                <span class="h2 lg:h1 m-0">€6,900</span>
-                                                <span class="fs-6 text-dark text-opacity-70 mb-2">one-time</span>
-                                            </div>
-                                            <p class="fs-7 text-dark text-opacity-70 mt-2">Complete digital transformation</p>
-                                        </div>
-                                        <div class="vstack gap-2 flex-1">
-                                            <span class="fs-6 fw-medium mb-1">Everything in Starter, plus:</span>
-                                            <ul class="vstack gap-2 fs-6 m-0 ps-0 list-none">
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span><strong>Online ordering system</strong></span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span><strong>Payment gateway integration</strong></span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>Table booking system</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>Customer database & CRM</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>Email marketing setup</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>Social media integration</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>Analytics dashboard</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>3 weeks delivery</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>Unlimited revisions</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check"></i><span>3 months support included</span></li>
-                                            </ul>
-                                        </div>
-                                        <a href="#uc-contact-modal" data-uc-toggle class="btn btn-dark btn-md w-100 rounded-pill">
-                                            Get Started <i class="icon icon-1 unicon-arrow-right ms-1"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Enterprise Package -->
-                            <div>
-                                <div class="panel p-5 lg:p-6 h-100 bg-tertiary-800 border border-gray-700 rounded-2 hover:border-primary transition-all duration-300" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
-                                    <div class="vstack gap-4 h-100">
-                                        <div>
-                                            <h3 class="h6 text-gray-400 m-0">Enterprise</h3>
-                                            <div class="hstack gap-2 items-end mt-2">
-                                                <span class="h2 lg:h1 m-0 text-white">Custom</span>
-                                            </div>
-                                            <p class="fs-7 text-gray-400 mt-2">For multi-location restaurants or chains</p>
-                                        </div>
-                                        <div class="vstack gap-2 flex-1">
-                                            <span class="fs-6 fw-medium text-white mb-1">Everything in Professional, plus:</span>
-                                            <ul class="vstack gap-2 fs-6 text-gray-300 m-0 ps-0 list-none">
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span><strong>Mobile app (iOS & Android)</strong></span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span><strong>Multi-location management</strong></span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Loyalty & rewards program</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Custom AI features</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>POS system integration</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Inventory management</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Staff management portal</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Advanced analytics & reporting</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>Dedicated account manager</span></li>
-                                                <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>12 months premium support</span></li>
-                                            </ul>
-                                        </div>
-                                        <a href="#uc-contact-modal" data-uc-toggle class="btn btn-outline-white btn-md w-100 rounded-pill">
-                                            Book Consultation <i class="icon icon-1 unicon-arrow-right ms-1"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Additional Info -->
-                        <div class="panel p-4 lg:p-5 bg-tertiary-800 border border-primary border-opacity-20 rounded-2 text-center" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 400;">
-                            <div class="vstack gap-3">
-                                <p class="fs-5 text-white m-0"><strong>Monthly Support Plans Available</strong> starting at €299/month</p>
-                                <div class="hstack gap-4 justify-center flex-wrap fs-6 text-gray-300">
-                                    <span>✓ Hosting & Security</span>
-                                    <span>✓ Software Updates</span>
-                                    <span>✓ Priority Support</span>
-                                    <span>✓ Performance Monitoring</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- SECTION 7: PRICING (DISABLED - COMMENTED OUT PER REQUEST) -->
+        <!-- Investment section hidden. -->
 
         <!-- SECTION 8: FAQ -->
         <div id="faq" class="section panel overflow-hidden bg-tertiary-800">
