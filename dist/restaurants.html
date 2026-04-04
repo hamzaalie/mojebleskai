@@ -253,129 +253,6 @@
             background: rgba(255, 91, 91, 0.08);
             color: rgba(255, 255, 255, 0.72);
         }
-        #case-study-feature .cs-wrap {
-            padding: 0;
-        }
-        #case-study-feature .project-card {
-            display: grid;
-            grid-template-columns: auto 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        #case-study-feature .services-tag-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-        #case-study-feature .section-block {
-            margin-bottom: 1rem;
-        }
-        #case-study-feature .x-list,
-        #case-study-feature .check-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin: 0;
-            padding: 0;
-        }
-        #case-study-feature .x-list li,
-        #case-study-feature .check-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            line-height: 1.6;
-        }
-        #case-study-feature .x-icon,
-        #case-study-feature .check-dot {
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
-            margin-top: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #case-study-feature .x-icon svg {
-            width: 14px;
-            height: 14px;
-        }
-        #case-study-feature .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 0.75rem;
-            margin-top: 0.5rem;
-        }
-        #case-study-feature .svc-icon-row {
-            display: flex;
-            align-items: center;
-            gap: 0.625rem;
-            margin-bottom: 0.5rem;
-        }
-        #case-study-feature .svc-icon {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #case-study-feature .svc-icon svg {
-            width: 16px;
-            height: 16px;
-        }
-        #case-study-feature .timeline {
-            display: flex;
-            flex-direction: column;
-        }
-        #case-study-feature .tl-item {
-            display: flex;
-            gap: 1rem;
-            padding-bottom: 1.25rem;
-            position: relative;
-        }
-        #case-study-feature .tl-item:last-child {
-            padding-bottom: 0;
-        }
-        #case-study-feature .tl-left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 32px;
-            flex-shrink: 0;
-        }
-        #case-study-feature .tl-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 4px;
-        }
-        #case-study-feature .tl-line {
-            width: 1px;
-            flex: 1;
-            margin-top: 4px;
-            background: rgba(255, 255, 255, 0.24);
-        }
-        #case-study-feature .tl-item:last-child .tl-line {
-            display: none;
-        }
-        #case-study-feature .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 0.75rem;
-            margin-top: 0.75rem;
-        }
-        #case-study-feature .quote-block {
-            padding-left: 1rem;
-            margin-top: 1.5rem;
-            border-left: 2px solid currentColor;
-        }
-        @media (max-width: 640px) {
-            #case-study-feature .project-card {
-                grid-template-columns: 1fr;
-            }
-        }
         .btn-outline-white {
             color: #ffffff !important;
             border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -1313,201 +1190,112 @@
         <div id="case-study-feature" class="section panel overflow-hidden bg-tertiary-800">
             <div class="section-outer panel py-6 lg:py-8 xl:py-10">
                 <div class="container">
-                    <div class="section-inner panel">
-                        <div class="cs-wrap">
-                            <div style="text-align: center;">
-                                <div class="pill-badge">
-                                    <span class="pill-dot"></span>
-                                    Featured Case Study
-                                </div>
-                            </div>
+                    <div class="section-inner panel vstack gap-4 lg:gap-5">
+                        <div class="panel vstack items-center gap-2 text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
+                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Featured Case Study</span>
+                            <h2 class="h3 lg:h2 m-0 text-white">A Restaurant Rebuild Told as a <span class="text-primary">Transformation Story</span></h2>
+                            <p class="fs-5 text-gray-300 max-w-900px m-0">Instead of another generic before-and-after card, this case study walks through the actual journey: what was broken, what we built, and what changed in the business.</p>
+                        </div>
 
-                            <h2 class="cs-headline">A Restaurant Rebuild Told as a <span>Transformation Story</span></h2>
-                            <p class="cs-sub">Instead of another generic before-and-after card, this case study walks through the actual journey: what was broken, what we built, and what changed in the business.</p>
-
-                            <div class="project-card">
-                                <span class="project-label">Balkan Grill House</span>
+                        <div class="panel p-4 lg:p-5 rounded-2 bg-tertiary-700 border border-white border-opacity-10" data-anime="onview: -150; translateY: [36, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 100;">
+                            <div class="row child-cols-12 lg:child-cols-3 g-3 lg:g-4 items-start">
                                 <div>
-                                    <div class="project-detail-label">Location &amp; Type</div>
-                                    <div class="project-detail-val">Prague, Czech Republic — Mid-size dine-in &amp; delivery restaurant, 80 seats, operating 6 years</div>
-                                    <div class="project-detail-label" style="margin-top: 12px;">Services Delivered</div>
-                                    <div class="services-tag-row">
-                                        <span class="stag">Branding</span>
-                                        <span class="stag">Website</span>
-                                        <span class="stag">Mobile App</span>
-                                        <span class="stag">Custom SaaS</span>
-                                        <span class="stag">AI Tools</span>
-                                        <span class="stag">Own Ordering System</span>
-                                        <span class="stag">Loyalty Platform</span>
-                                        <span class="stag">SEO</span>
-                                        <span class="stag">Social Media</span>
-                                        <span class="stag">Photography</span>
+                                    <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Balkan Grill House</span>
+                                </div>
+                                <div class="vstack gap-2">
+                                    <div>
+                                        <div class="fs-7 text-gray-400 text-uppercase">Location &amp; Type</div>
+                                        <p class="fs-5 text-white m-0">Prague, Czech Republic — Mid-size dine-in &amp; delivery restaurant, 80 seats, operating 6 years</p>
+                                    </div>
+                                    <div>
+                                        <div class="fs-7 text-gray-400 text-uppercase">Services Delivered</div>
+                                        <div class="hstack gap-2 flex-wrap mt-1">
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Branding</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Website</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Mobile App</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Custom SaaS</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">AI Tools</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Own Ordering System</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Loyalty Platform</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">SEO</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Social Media</span>
+                                            <span class="badge bg-tertiary-600 text-white fs-7">Photography</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="project-detail-label">Duration &amp; Outcome</div>
-                                    <div class="project-detail-val">10-week transformation — from fragmented tools and third-party dependency to a fully owned, direct-revenue machine.</div>
+                                    <div class="fs-7 text-gray-400 text-uppercase">Duration &amp; Outcome</div>
+                                    <p class="fs-5 text-white m-0">10-week transformation — from fragmented tools and third-party dependency to a fully owned, direct-revenue machine.</p>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="section-block">
-                                <span class="block-label label-red">The Problem</span>
-                                <h3 class="block-h">The restaurant looked busy — but the system was quietly bleeding money every single day</h3>
-                                <ul class="x-list">
-                                    <li>
-                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                                        Bolt Food and Wolt were taking 28–32% commission on every delivery order — costing the owner over €3,200/month in pure platform fees.
-                                    </li>
-                                    <li>
-                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                                        The website was a 4-year-old template with no online booking, no ordering, and not a single call-to-action that worked. It ranked on page 4 of Google.
-                                    </li>
-                                    <li>
-                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                                        The brand had no identity — the logo, menu, social media, and signage all looked like they came from different businesses. No consistency, no memorability.
-                                    </li>
-                                    <li>
-                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                                        There was zero customer retention system. No loyalty program, no email list, no way to bring a guest back after their first visit.
-                                    </li>
-                                    <li>
-                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                                        Staff scheduling was done on paper. Inventory was tracked in Excel. The owner was spending 3+ hours a day on operational admin instead of running the business.
-                                    </li>
-                                    <li>
-                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                                        Google reviews were being ignored. 14 unanswered 3-star reviews sat live — silently killing new customer trust.
-                                    </li>
-                                </ul>
+                        <div class="panel p-4 lg:p-5 rounded-2 bg-tertiary-700 border border-white border-opacity-10" data-anime="onview: -150; translateY: [36, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 140;">
+                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">The Problem</span>
+                            <h3 class="h4 m-0 mt-3 text-white">The restaurant looked busy — but the system was quietly bleeding money every single day</h3>
+                            <ul class="list-none ps-0 m-0 mt-3 vstack gap-2">
+                                <li class="hstack items-start gap-2 fs-5 text-gray-300"><i class="icon icon-1 unicon-close text-primary mt-narrow"></i><span>Bolt Food and Wolt were taking 28–32% commission on every delivery order — costing the owner over €3,200/month in pure platform fees.</span></li>
+                                <li class="hstack items-start gap-2 fs-5 text-gray-300"><i class="icon icon-1 unicon-close text-primary mt-narrow"></i><span>The website was a 4-year-old template with no online booking, no ordering, and not a single call-to-action that worked. It ranked on page 4 of Google.</span></li>
+                                <li class="hstack items-start gap-2 fs-5 text-gray-300"><i class="icon icon-1 unicon-close text-primary mt-narrow"></i><span>The brand had no identity — the logo, menu, social media, and signage all looked like they came from different businesses. No consistency, no memorability.</span></li>
+                                <li class="hstack items-start gap-2 fs-5 text-gray-300"><i class="icon icon-1 unicon-close text-primary mt-narrow"></i><span>There was zero customer retention system. No loyalty program, no email list, no way to bring a guest back after their first visit.</span></li>
+                                <li class="hstack items-start gap-2 fs-5 text-gray-300"><i class="icon icon-1 unicon-close text-primary mt-narrow"></i><span>Staff scheduling was done on paper. Inventory was tracked in Excel. The owner was spending 3+ hours a day on operational admin instead of running the business.</span></li>
+                                <li class="hstack items-start gap-2 fs-5 text-gray-300"><i class="icon icon-1 unicon-close text-primary mt-narrow"></i><span>Google reviews were being ignored. 14 unanswered 3-star reviews sat live — silently killing new customer trust.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="panel p-4 lg:p-5 rounded-2 bg-tertiary-700 border border-white border-opacity-10" data-anime="onview: -150; translateY: [36, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 180;">
+                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">What We Built</span>
+                            <h3 class="h4 m-0 mt-3 text-white">A complete digital and operational rebuild — every service chosen to solve a specific problem</h3>
+                            <div class="row child-cols-12 md:child-cols-2 xl:child-cols-3 g-3 mt-2">
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Full Brand Identity</h4><p class="fs-6 text-gray-300 m-0 mt-1">New logo, color system, typography, photography direction, and brand voice. Every touchpoint now looks and feels like one brand.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Custom Website</h4><p class="fs-6 text-gray-300 m-0 mt-1">Mobile-first, SEO-optimized site with direct table booking, digital menus, and a contact funnel. Ranked on Google Page 1 in 6 weeks.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Restaurant Mobile App</h4><p class="fs-6 text-gray-300 m-0 mt-1">iOS &amp; Android app with direct ordering, table reservations, loyalty points, and push notifications. Zero commission. 100% their data.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Own Ordering System</h4><p class="fs-6 text-gray-300 m-0 mt-1">Custom white-label ordering platform replacing Bolt Food and Wolt for direct orders. Saved €3,200/month from day one of launch.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Loyalty &amp; CRM Platform</h4><p class="fs-6 text-gray-300 m-0 mt-1">AI-powered loyalty system that tracks visits, sends automated re-engagement messages, and predicts which customers are about to churn.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">AI Chatbot &amp; Booking Agent</h4><p class="fs-6 text-gray-300 m-0 mt-1">24/7 AI assistant on the website and app — handles reservations, answers FAQs, recommends dishes, and collects guest data automatically.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Restaurant SaaS Dashboard</h4><p class="fs-6 text-gray-300 m-0 mt-1">One custom management panel for sales, inventory, staff scheduling, loyalty analytics, and reviews — replacing 7 disconnected tools.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">AI Review Management</h4><p class="fs-6 text-gray-300 m-0 mt-1">AI auto-responds to Google &amp; TripAdvisor reviews with brand-consistent replies. All 14 old negative reviews addressed within 48 hours of launch.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">AI Inventory &amp; Waste AI</h4><p class="fs-6 text-gray-300 m-0 mt-1">Demand forecasting AI that reduced food waste by 31% in the first month by predicting daily cover counts and adjusting prep quantities.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Local SEO &amp; Google Ads</h4><p class="fs-6 text-gray-300 m-0 mt-1">Full Google Business optimization, local keyword targeting, and paid ad campaigns. Organic impressions up 380% in 8 weeks.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Social Media System</h4><p class="fs-6 text-gray-300 m-0 mt-1">Monthly content calendar, branded templates, reels scripts, and UGC strategy. Instagram follower growth of 2,100 in first 60 days.</p></div></div>
+                                <div class="col"><div class="panel p-3 bg-tertiary-600 rounded-2 h-100"><h4 class="h6 text-white m-0">Pro Photography &amp; Menu Design</h4><p class="fs-6 text-gray-300 m-0 mt-1">Full food photography shoot + redesigned print &amp; QR digital menus. New menus increased average order value by €4.20 per table.</p></div></div>
                             </div>
+                        </div>
 
-                            <div class="section-block">
-                                <span class="block-label label-blue">What We Built</span>
-                                <h3 class="block-h">A complete digital and operational rebuild — every service chosen to solve a specific problem</h3>
-                                <div class="service-grid">
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-                                            <span class="svc-name">Full Brand Identity</span>
-                                        </div>
-                                        <p class="svc-desc">New logo, color system, typography, photography direction, and brand voice. Every touchpoint now looks and feels like one brand.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                                            <span class="svc-name">Custom Website</span>
-                                        </div>
-                                        <p class="svc-desc">Mobile-first, SEO-optimized site with direct table booking, digital menus, and a contact funnel. Ranked on Google Page 1 in 6 weeks.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
-                                            <span class="svc-name">Restaurant Mobile App</span>
-                                        </div>
-                                        <p class="svc-desc">iOS &amp; Android app with direct ordering, table reservations, loyalty points, and push notifications. Zero commission. 100% their data.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
-                                            <span class="svc-name">Own Ordering System</span>
-                                        </div>
-                                        <p class="svc-desc">Custom white-label ordering platform replacing Bolt Food and Wolt for direct orders. Saved €3,200/month from day one of launch.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-                                            <span class="svc-name">Loyalty &amp; CRM Platform</span>
-                                        </div>
-                                        <p class="svc-desc">AI-powered loyalty system that tracks visits, sends automated re-engagement messages, and predicts which customers are about to churn.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                                            <span class="svc-name">AI Chatbot &amp; Booking Agent</span>
-                                        </div>
-                                        <p class="svc-desc">24/7 AI assistant on the website and app — handles reservations, answers FAQs, recommends dishes, and collects guest data automatically.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
-                                            <span class="svc-name">Restaurant SaaS Dashboard</span>
-                                        </div>
-                                        <p class="svc-desc">One custom management panel for sales, inventory, staff scheduling, loyalty analytics, and reviews — replacing 7 disconnected tools.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                                            <span class="svc-name">AI Review Management</span>
-                                        </div>
-                                        <p class="svc-desc">AI auto-responds to Google &amp; TripAdvisor reviews with brand-consistent replies. All 14 old negative reviews addressed within 48 hours of launch.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-                                            <span class="svc-name">AI Inventory &amp; Waste AI</span>
-                                        </div>
-                                        <p class="svc-desc">Demand forecasting AI that reduced food waste by 31% in the first month by predicting daily cover counts and adjusting prep quantities.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-                                            <span class="svc-name">Local SEO &amp; Google Ads</span>
-                                        </div>
-                                        <p class="svc-desc">Full Google Business optimization, local keyword targeting, and paid ad campaigns. Organic impressions up 380% in 8 weeks.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-                                            <span class="svc-name">Social Media System</span>
-                                        </div>
-                                        <p class="svc-desc">Monthly content calendar, branded templates, reels scripts, and UGC strategy. Instagram follower growth of 2,100 in first 60 days.</p>
-                                    </div>
-                                    <div class="svc-card">
-                                        <div class="svc-icon-row">
-                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-                                            <span class="svc-name">Pro Photography &amp; Menu Design</span>
-                                        </div>
-                                        <p class="svc-desc">Full food photography shoot + redesigned print &amp; QR digital menus. New menus increased average order value by €4.20 per table.</p>
-                                    </div>
-                                </div>
+                        <div class="panel p-4 lg:p-5 rounded-2 bg-tertiary-700 border border-white border-opacity-10" data-anime="onview: -150; translateY: [36, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 220;">
+                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">How We Did It - Week by Week</span>
+                            <h3 class="h4 m-0 mt-3 text-white">10 weeks. One team. Complete ownership.</h3>
+                            <div class="vstack gap-3 mt-3">
+                                <div><div class="fs-7 fw-medium text-primary">Week 1-2</div><div class="h6 text-white m-0 mt-narrow">Discovery, Audit &amp; Strategy</div><p class="fs-6 text-gray-300 m-0 mt-1">We audited every digital touchpoint - website, Google ranking, delivery app dependency, social profiles, branding, and internal tools. Presented a full transformation roadmap with clear ROI projections before a single line of code was written.</p></div>
+                                <div><div class="fs-7 fw-medium text-primary">Week 3-4</div><div class="h6 text-white m-0 mt-narrow">Brand Identity &amp; Photography</div><p class="fs-6 text-gray-300 m-0 mt-1">Designed full brand system: logo, color palette, typography, and tone of voice. On-site photography shoot produced 80+ images used across all channels. New menus designed - print and QR digital version.</p></div>
+                                <div><div class="fs-7 fw-medium text-primary">Week 4-6</div><div class="h6 text-white m-0 mt-narrow">Website, Ordering System &amp; SEO</div><p class="fs-6 text-gray-300 m-0 mt-1">Launched the new custom website with integrated direct ordering, table reservations, and SEO structure. Within 3 weeks, 12 target keywords moved to page 1 of Google.</p></div>
+                                <div><div class="fs-7 fw-medium text-primary">Week 6-8</div><div class="h6 text-white m-0 mt-narrow">Mobile App, AI Tools &amp; Loyalty Platform</div><p class="fs-6 text-gray-300 m-0 mt-1">Deployed iOS and Android app with loyalty points and push notifications. Activated the AI chatbot for reservations and the AI review management system. All 14 unanswered Google reviews responded to within 48 hours.</p></div>
+                                <div><div class="fs-7 fw-medium text-primary">Week 8-10</div><div class="h6 text-white m-0 mt-narrow">SaaS Dashboard, Inventory AI &amp; Go-Live</div><p class="fs-6 text-gray-300 m-0 mt-1">Launched the custom management dashboard replacing all disconnected tools. Inventory AI went live - reducing daily food waste from the first week. Full team training completed. Paid ad campaigns launched on Meta and Google.</p></div>
                             </div>
+                        </div>
 
-                            <div class="section-block">
-                                <span class="block-label label-amber">How We Did It — Week by Week</span>
-                                <h3 class="block-h">10 weeks. One team. Complete ownership.</h3>
-                                <div class="timeline">
-                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 1–2</div><div class="tl-title">Discovery, Audit &amp; Strategy</div><div class="tl-desc">We audited every digital touchpoint — website, Google ranking, delivery app dependency, social profiles, branding, and internal tools. Presented a full transformation roadmap with clear ROI projections before a single line of code was written.</div></div></div>
-                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 3–4</div><div class="tl-title">Brand Identity &amp; Photography</div><div class="tl-desc">Designed full brand system: logo, color palette, typography, and tone of voice. On-site photography shoot produced 80+ images used across all channels. New menus designed — print and QR digital version.</div></div></div>
-                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 4–6</div><div class="tl-title">Website, Ordering System &amp; SEO</div><div class="tl-desc">Launched the new custom website with integrated direct ordering, table reservations, and SEO structure. Within 3 weeks, 12 target keywords moved to page 1 of Google.</div></div></div>
-                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 6–8</div><div class="tl-title">Mobile App, AI Tools &amp; Loyalty Platform</div><div class="tl-desc">Deployed iOS and Android app with loyalty points and push notifications. Activated the AI chatbot for reservations and the AI review management system. All 14 unanswered Google reviews responded to within 48 hours.</div></div></div>
-                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 8–10</div><div class="tl-title">SaaS Dashboard, Inventory AI &amp; Go-Live</div><div class="tl-desc">Launched the custom management dashboard replacing all disconnected tools. Inventory AI went live — reducing daily food waste from the first week. Full team training completed. Paid ad campaigns launched on Meta and Google.</div></div></div>
-                                </div>
+                        <div class="panel p-4 lg:p-5 rounded-2 bg-tertiary-700 border border-white border-opacity-10" data-anime="onview: -150; translateY: [36, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 260;">
+                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">The Results</span>
+                            <h3 class="h4 m-0 mt-3 text-white">60 days after launch</h3>
+                            <div class="row child-cols-6 md:child-cols-4 xl:child-cols-4 g-3 mt-2">
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">€3,800</div><div class="fs-7 text-gray-300 mt-1">saved per month by eliminating delivery app commissions</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">+167%</div><div class="fs-7 text-gray-300 mt-1">increase in direct online orders via own app and website</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">31%</div><div class="fs-7 text-gray-300 mt-1">reduction in food waste using the inventory AI</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">4.8★</div><div class="fs-7 text-gray-300 mt-1">Google rating, up from 3.9★ - reviews actively managed</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">2,100+</div><div class="fs-7 text-gray-300 mt-1">new Instagram followers in the first 60 days</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">€4.20</div><div class="fs-7 text-gray-300 mt-1">increase in average order value per table after menu redesign</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">380%</div><div class="fs-7 text-gray-300 mt-1">increase in organic Google impressions in 8 weeks</div></div></div>
+                                <div class="col"><div class="panel p-3 rounded-2 bg-tertiary-600 text-center h-100"><div class="h4 m-0 text-primary">3 hrs</div><div class="fs-7 text-gray-300 mt-1">of daily admin time saved using the SaaS management dashboard</div></div></div>
                             </div>
-
-                            <div class="section-block">
-                                <span class="block-label label-green">The Results</span>
-                                <h3 class="block-h">60 days after launch</h3>
-                                <div class="results-grid">
-                                    <div class="res-card"><div class="res-number">€3,800</div><div class="res-label">saved per month by eliminating delivery app commissions</div></div>
-                                    <div class="res-card"><div class="res-number">+167%</div><div class="res-label">increase in direct online orders via own app and website</div></div>
-                                    <div class="res-card"><div class="res-number">31%</div><div class="res-label">reduction in food waste using the inventory AI</div></div>
-                                    <div class="res-card"><div class="res-number">4.8★</div><div class="res-label">Google rating, up from 3.9★ — reviews actively managed</div></div>
-                                    <div class="res-card"><div class="res-number">2,100+</div><div class="res-label">new Instagram followers in the first 60 days</div></div>
-                                    <div class="res-card"><div class="res-number">€4.20</div><div class="res-label">increase in average order value per table after menu redesign</div></div>
-                                    <div class="res-card"><div class="res-number">380%</div><div class="res-label">increase in organic Google impressions in 8 weeks</div></div>
-                                    <div class="res-card"><div class="res-number">3 hrs</div><div class="res-label">of daily admin time saved using the SaaS management dashboard</div></div>
-                                </div>
-
-                                <div class="quote-block">
-                                    <p class="quote-text">"I knew we had problems, but I didn't realize how much money we were leaving on the table every single month. The delivery app fees alone were paying for this entire project twice over. Now we own our customers, our data, and our revenue. I only wish we had done this two years earlier."</p>
-                                    <p class="quote-author">— Miroslav K., Owner, Balkan Grill House, Prague</p>
-                                </div>
+                            <div class="panel p-4 mt-3 rounded-2 bg-tertiary-600 border border-primary border-opacity-25">
+                                <p class="fs-5 text-gray-200 fst-italic m-0">"I knew we had problems, but I didn't realize how much money we were leaving on the table every single month. The delivery app fees alone were paying for this entire project twice over. Now we own our customers, our data, and our revenue. I only wish we had done this two years earlier."</p>
+                                <p class="fs-6 text-primary m-0 mt-2">- Miroslav K., Owner, Balkan Grill House, Prague</p>
                             </div>
+                        </div>
 
-                            <div style="text-align: center; margin-top: 32px;">
-                                <p style="margin-bottom: 16px;">Want results like these for your restaurant?</p>
-                                <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary rounded-pill px-6">Book My Free Strategy Call ↗</a>
-                            </div>
+                        <div class="panel text-center" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
+                            <p class="fs-5 text-white mb-3">Want results like these for your restaurant?</p>
+                            <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary px-6 rounded-pill">Book My Free Strategy Call <i class="icon icon-1 unicon-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
