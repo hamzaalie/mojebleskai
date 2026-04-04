@@ -254,18 +254,19 @@
             color: rgba(255, 255, 255, 0.72);
         }
         #case-study-feature .cs-wrap {
-            background: #0a1f1a;
-            color: #e8f0ee;
+            color: rgba(255, 255, 255, 0.9);
             padding: 64px 24px;
             border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         #case-study-feature .pill-badge {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(74, 200, 120, 0.12);
-            border: 1px solid rgba(74, 200, 120, 0.35);
-            color: #4ac878;
+            background: rgba(var(--bs-primary-rgb), 0.12);
+            border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
+            color: var(--bs-primary);
             font-size: 12px;
             font-weight: 500;
             padding: 6px 16px;
@@ -275,7 +276,7 @@
         #case-study-feature .pill-dot {
             width: 7px;
             height: 7px;
-            background: #4ac878;
+            background: currentColor;
             border-radius: 50%;
         }
         #case-study-feature .cs-headline {
@@ -287,18 +288,18 @@
             color: #fff;
         }
         #case-study-feature .cs-headline span {
-            color: #4ac878;
+            color: var(--bs-primary);
         }
         #case-study-feature .cs-sub {
             text-align: center;
-            color: #8aab9e;
+            color: rgba(255, 255, 255, 0.7);
             font-size: 15px;
             line-height: 1.7;
             max-width: 640px;
             margin: 0 auto 40px;
         }
         #case-study-feature .project-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 24px 28px;
@@ -309,9 +310,9 @@
             margin-bottom: 16px;
         }
         #case-study-feature .project-label {
-            background: rgba(74, 200, 120, 0.15);
-            border: 1px solid rgba(74, 200, 120, 0.3);
-            color: #4ac878;
+            background: rgba(var(--bs-primary-rgb), 0.14);
+            border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
+            color: var(--bs-primary);
             font-size: 12px;
             font-weight: 500;
             padding: 6px 14px;
@@ -320,14 +321,14 @@
         }
         #case-study-feature .project-detail-label {
             font-size: 11px;
-            color: #5a7a6e;
+            color: rgba(255, 255, 255, 0.55);
             text-transform: uppercase;
             letter-spacing: 0.08em;
             margin-bottom: 6px;
         }
         #case-study-feature .project-detail-val {
             font-size: 14px;
-            color: #c2dbd3;
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.6;
         }
         #case-study-feature .services-tag-row {
@@ -337,15 +338,15 @@
             margin-top: 8px;
         }
         #case-study-feature .stag {
-            background: rgba(74, 200, 120, 0.1);
-            border: 1px solid rgba(74, 200, 120, 0.25);
-            color: #4ac878;
+            background: rgba(var(--bs-primary-rgb), 0.1);
+            border: 1px solid rgba(var(--bs-primary-rgb), 0.25);
+            color: var(--bs-primary);
             font-size: 11px;
             padding: 4px 10px;
             border-radius: 6px;
         }
         #case-study-feature .section-block {
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.09);
             border-radius: 12px;
             padding: 28px;
@@ -360,26 +361,17 @@
             border-radius: 6px;
             margin-bottom: 16px;
             text-transform: uppercase;
+            background: rgba(var(--bs-primary-rgb), 0.12);
+            border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
+            color: var(--bs-primary);
         }
-        #case-study-feature .label-red {
-            background: rgba(220, 70, 60, 0.2);
-            color: #e06060;
-            border: 1px solid rgba(220, 70, 60, 0.3);
-        }
-        #case-study-feature .label-amber {
-            background: rgba(200, 140, 40, 0.2);
-            color: #e0a840;
-            border: 1px solid rgba(200, 140, 40, 0.3);
-        }
-        #case-study-feature .label-green {
-            background: rgba(74, 200, 120, 0.15);
-            color: #4ac878;
-            border: 1px solid rgba(74, 200, 120, 0.3);
-        }
+        #case-study-feature .label-red,
+        #case-study-feature .label-amber,
+        #case-study-feature .label-green,
         #case-study-feature .label-blue {
-            background: rgba(60, 140, 220, 0.15);
-            color: #60aaee;
-            border: 1px solid rgba(60, 140, 220, 0.3);
+            background: rgba(var(--bs-primary-rgb), 0.12);
+            border: 1px solid rgba(var(--bs-primary-rgb), 0.3);
+            color: var(--bs-primary);
         }
         #case-study-feature .block-h {
             font-size: clamp(17px, 2.5vw, 22px);
@@ -404,12 +396,7 @@
             gap: 12px;
             font-size: 14px;
             line-height: 1.6;
-        }
-        #case-study-feature .x-list li {
-            color: #8aab9e;
-        }
-        #case-study-feature .check-list li {
-            color: #c2dbd3;
+            color: rgba(255, 255, 255, 0.74);
         }
         #case-study-feature .x-icon,
         #case-study-feature .check-dot {
@@ -420,14 +407,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--bs-primary);
         }
         #case-study-feature .x-icon svg {
             width: 14px;
             height: 14px;
         }
+        #case-study-feature .x-icon svg path {
+            stroke: currentColor !important;
+        }
         #case-study-feature .check-dot {
             margin-top: 3px;
-            background: rgba(74, 200, 120, 0.2);
+            background: rgba(var(--bs-primary-rgb), 0.2);
             border-radius: 50%;
         }
         #case-study-feature .check-dot svg {
@@ -441,8 +432,8 @@
             margin-top: 8px;
         }
         #case-study-feature .svc-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(74, 200, 120, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 16px;
         }
@@ -455,7 +446,7 @@
         #case-study-feature .svc-icon {
             width: 32px;
             height: 32px;
-            background: rgba(74, 200, 120, 0.12);
+            background: rgba(var(--bs-primary-rgb), 0.12);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -464,7 +455,11 @@
         #case-study-feature .svc-icon svg {
             width: 16px;
             height: 16px;
-            fill: #4ac878;
+            stroke: var(--bs-primary);
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
         #case-study-feature .svc-name {
             font-size: 13px;
@@ -473,7 +468,7 @@
         }
         #case-study-feature .svc-desc {
             font-size: 12px;
-            color: #6a9080;
+            color: rgba(255, 255, 255, 0.67);
             line-height: 1.5;
         }
         #case-study-feature .timeline {
@@ -500,9 +495,9 @@
         #case-study-feature .tl-dot {
             width: 10px;
             height: 10px;
-            background: #4ac878;
+            background: var(--bs-primary);
             border-radius: 50%;
-            border: 2px solid #0a1f1a;
+            border: 2px solid #191f3a;
             flex-shrink: 0;
             margin-top: 4px;
             z-index: 1;
@@ -510,7 +505,7 @@
         #case-study-feature .tl-line {
             width: 1px;
             flex: 1;
-            background: rgba(74, 200, 120, 0.25);
+            background: rgba(var(--bs-primary-rgb), 0.35);
             margin-top: 4px;
         }
         #case-study-feature .tl-item:last-child .tl-line {
@@ -518,7 +513,7 @@
         }
         #case-study-feature .tl-week {
             font-size: 11px;
-            color: #4ac878;
+            color: var(--bs-primary);
             font-weight: 500;
             margin-bottom: 3px;
         }
@@ -530,7 +525,7 @@
         }
         #case-study-feature .tl-desc {
             font-size: 13px;
-            color: #6a9080;
+            color: rgba(255, 255, 255, 0.67);
             line-height: 1.5;
         }
         #case-study-feature .results-grid {
@@ -540,8 +535,8 @@
             margin-top: 12px;
         }
         #case-study-feature .res-card {
-            background: rgba(74, 200, 120, 0.08);
-            border: 1px solid rgba(74, 200, 120, 0.25);
+            background: rgba(var(--bs-primary-rgb), 0.08);
+            border: 1px solid rgba(var(--bs-primary-rgb), 0.24);
             border-radius: 10px;
             padding: 16px;
             text-align: center;
@@ -549,32 +544,32 @@
         #case-study-feature .res-number {
             font-size: 28px;
             font-weight: 500;
-            color: #4ac878;
+            color: var(--bs-primary);
             line-height: 1.1;
         }
         #case-study-feature .res-label {
             font-size: 12px;
-            color: #5a9070;
+            color: rgba(255, 255, 255, 0.65);
             margin-top: 4px;
             line-height: 1.4;
         }
         #case-study-feature .quote-block {
-            border-left: 3px solid #4ac878;
+            border-left: 3px solid var(--bs-primary);
             padding: 16px 20px;
-            background: rgba(74, 200, 120, 0.06);
+            background: rgba(var(--bs-primary-rgb), 0.08);
             border-radius: 0 10px 10px 0;
             margin-top: 24px;
         }
         #case-study-feature .quote-text {
             font-size: 15px;
-            color: #c2dbd3;
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.7;
             font-style: italic;
             margin: 0;
         }
         #case-study-feature .quote-author {
             font-size: 13px;
-            color: #4ac878;
+            color: var(--bs-primary);
             margin-top: 10px;
             font-style: normal;
         }
@@ -1712,7 +1707,7 @@
                             </div>
 
                             <div style="text-align: center; margin-top: 32px;">
-                                <p style="font-size: 13px; color: #5a7a6e; margin-bottom: 16px;">Want results like these for your restaurant?</p>
+                                <p style="font-size: 13px; color: rgba(255, 255, 255, 0.7); margin-bottom: 16px;">Want results like these for your restaurant?</p>
                                 <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary rounded-pill px-6">Book My Free Strategy Call ↗</a>
                             </div>
                         </div>
