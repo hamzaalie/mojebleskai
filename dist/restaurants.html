@@ -253,241 +253,334 @@
             background: rgba(255, 91, 91, 0.08);
             color: rgba(255, 255, 255, 0.72);
         }
-        #case-study-feature .case-intro-strip,
-        #case-study-feature .case-problem-block,
-        #case-study-feature .case-build-block,
-        #case-study-feature .case-results-block,
-        #case-study-feature .case-build-item,
-        #case-study-feature .case-kpi {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.11);
+        #case-study-feature .cs-wrap {
+            background: #0a1f1a;
+            color: #e8f0ee;
+            padding: 64px 24px;
+            border-radius: 16px;
         }
-        #case-study-feature .case-feature-pill {
-            position: relative;
+        #case-study-feature .pill-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.45rem;
-            padding: 0.46rem 1rem;
-            border-radius: 999px;
-            border: 1px solid rgba(185, 255, 159, 0.45);
-            background: linear-gradient(90deg, rgba(185, 255, 159, 0.24), rgba(185, 255, 159, 0.08));
-            color: #d9ffcb;
-            box-shadow: 0 0 0 1px rgba(185, 255, 159, 0.08) inset;
+            gap: 6px;
+            background: rgba(74, 200, 120, 0.12);
+            border: 1px solid rgba(74, 200, 120, 0.35);
+            color: #4ac878;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 24px;
         }
-        #case-study-feature .case-feature-pill::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 999px;
-            background: #d9ffcb;
-            box-shadow: 0 0 0 6px rgba(185, 255, 159, 0.14);
+        #case-study-feature .pill-dot {
+            width: 7px;
+            height: 7px;
+            background: #4ac878;
+            border-radius: 50%;
         }
-        #case-study-feature .case-headline {
-            letter-spacing: -0.02em;
-            max-width: 980px;
-            margin-left: auto;
-            margin-right: auto;
+        #case-study-feature .cs-headline {
+            font-size: clamp(26px, 4vw, 42px);
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 14px;
+            color: #fff;
         }
-        #case-study-feature .case-intro-strip {
-            border-radius: 24px;
-            padding: 1.25rem;
-            background: linear-gradient(90deg, rgba(185, 255, 159, 0.12), rgba(255, 255, 255, 0.02));
+        #case-study-feature .cs-headline span {
+            color: #4ac878;
         }
-        #case-study-feature .case-problem-block,
-        #case-study-feature .case-build-block,
-        #case-study-feature .case-results-block {
-            position: relative;
-            overflow: hidden;
+        #case-study-feature .cs-sub {
+            text-align: center;
+            color: #8aab9e;
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 640px;
+            margin: 0 auto 40px;
         }
-        #case-study-feature .case-problem-block::before,
-        #case-study-feature .case-build-block::before,
-        #case-study-feature .case-results-block::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, rgba(185, 255, 159, 0.8), rgba(185, 255, 159, 0));
-            pointer-events: none;
+        #case-study-feature .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px 28px;
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 24px;
+            align-items: start;
+            margin-bottom: 16px;
         }
-        #case-study-feature .case-problem-block,
-        #case-study-feature .case-results-block {
-            border-radius: 24px;
-            padding: 1.35rem;
+        #case-study-feature .project-label {
+            background: rgba(74, 200, 120, 0.15);
+            border: 1px solid rgba(74, 200, 120, 0.3);
+            color: #4ac878;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 100px;
+            white-space: nowrap;
         }
-        #case-study-feature .case-build-block {
-            border-radius: 24px;
-            padding: 1.35rem;
+        #case-study-feature .project-detail-label {
+            font-size: 11px;
+            color: #5a7a6e;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
         }
-        #case-study-feature .case-problem-block {
+        #case-study-feature .project-detail-val {
+            font-size: 14px;
+            color: #c2dbd3;
+            line-height: 1.6;
+        }
+        #case-study-feature .services-tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        #case-study-feature .stag {
+            background: rgba(74, 200, 120, 0.1);
+            border: 1px solid rgba(74, 200, 120, 0.25);
+            color: #4ac878;
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        #case-study-feature .section-block {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 16px;
+        }
+        #case-study-feature .block-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            padding: 5px 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        #case-study-feature .label-red {
+            background: rgba(220, 70, 60, 0.2);
+            color: #e06060;
+            border: 1px solid rgba(220, 70, 60, 0.3);
+        }
+        #case-study-feature .label-amber {
+            background: rgba(200, 140, 40, 0.2);
+            color: #e0a840;
+            border: 1px solid rgba(200, 140, 40, 0.3);
+        }
+        #case-study-feature .label-green {
+            background: rgba(74, 200, 120, 0.15);
+            color: #4ac878;
+            border: 1px solid rgba(74, 200, 120, 0.3);
+        }
+        #case-study-feature .label-blue {
+            background: rgba(60, 140, 220, 0.15);
+            color: #60aaee;
+            border: 1px solid rgba(60, 140, 220, 0.3);
+        }
+        #case-study-feature .block-h {
+            font-size: clamp(17px, 2.5vw, 22px);
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        #case-study-feature .x-list,
+        #case-study-feature .check-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             margin: 0;
-            width: 100%;
+            padding: 0;
         }
-        #case-study-feature .case-build-block {
-            margin: 0;
-            width: 100%;
+        #case-study-feature .x-list li,
+        #case-study-feature .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            line-height: 1.6;
         }
-        #case-study-feature .case-results-block {
-            margin: 0;
-            width: 100%;
+        #case-study-feature .x-list li {
+            color: #8aab9e;
         }
-        #case-study-feature .case-label {
-            display: inline-flex;
+        #case-study-feature .check-list li {
+            color: #c2dbd3;
+        }
+        #case-study-feature .x-icon,
+        #case-study-feature .check-dot {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0.35rem 0.85rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            border: 1px solid transparent;
-            align-self: flex-start;
         }
-        #case-study-feature .case-label.problem {
-            color: #ff9898;
-            background: rgba(255, 91, 91, 0.12);
-            border-color: rgba(255, 91, 91, 0.35);
+        #case-study-feature .x-icon svg {
+            width: 14px;
+            height: 14px;
         }
-        #case-study-feature .case-label.build {
-            color: #c7ffb1;
-            background: rgba(185, 255, 159, 0.12);
-            border-color: rgba(185, 255, 159, 0.35);
+        #case-study-feature .check-dot {
+            margin-top: 3px;
+            background: rgba(74, 200, 120, 0.2);
+            border-radius: 50%;
         }
-        #case-study-feature .case-label.result {
-            color: #9de7ff;
-            background: rgba(82, 205, 255, 0.12);
-            border-color: rgba(82, 205, 255, 0.35);
+        #case-study-feature .check-dot svg {
+            width: 10px;
+            height: 10px;
         }
-        #case-study-feature .case-bullets {
+        #case-study-feature .service-grid {
             display: grid;
-            gap: 0.85rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 8px;
         }
-        #case-study-feature .case-bullets li {
-            display: grid;
-            grid-template-columns: 22px 1fr;
-            gap: 0.75rem;
-            align-items: start;
-            color: rgba(255, 255, 255, 0.8);
+        #case-study-feature .svc-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(74, 200, 120, 0.2);
+            border-radius: 10px;
+            padding: 16px;
         }
-        #case-study-feature .case-bullets.problem i {
-            color: #ff9898;
-        }
-        #case-study-feature .case-bullets.result i {
-            color: #c7ffb1;
-        }
-        #case-study-feature .case-service-list {
-            display: grid;
-            gap: 1rem;
-        }
-        #case-study-feature .case-service-row {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 1rem;
-            border-radius: 22px;
-            border: 1px solid rgba(255, 255, 255, 0.11);
-            background: rgba(255, 255, 255, 0.03);
-            padding: 1rem;
-            align-items: stretch;
-        }
-        #case-study-feature .case-service-row.is-reverse .case-service-content {
-            order: 2;
-        }
-        #case-study-feature .case-service-row.is-reverse .case-service-media {
-            order: 1;
-        }
-        #case-study-feature .case-service-content {
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            background: rgba(255, 255, 255, 0.025);
-            padding: 1.15rem;
-            display: grid;
-            align-content: center;
-            gap: 0.65rem;
-        }
-        #case-study-feature .case-service-kicker {
-            display: inline-flex;
+        #case-study-feature .svc-icon-row {
+            display: flex;
             align-items: center;
-            width: fit-content;
-            gap: 0.45rem;
-            padding: 0.3rem 0.75rem;
-            border-radius: 999px;
-            border: 1px solid rgba(185, 255, 159, 0.32);
-            background: rgba(185, 255, 159, 0.1);
-            color: #c7ffb1;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
+            gap: 10px;
+            margin-bottom: 8px;
         }
-        #case-study-feature .case-service-kicker .icon {
-            font-size: 0.9rem;
+        #case-study-feature .svc-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(74, 200, 120, 0.12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        #case-study-feature .case-service-title {
-            margin: 0;
-            color: #ffffff;
-            font-size: clamp(1.2rem, 2vw, 1.65rem);
-            line-height: 1.2;
+        #case-study-feature .svc-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #4ac878;
         }
-        #case-study-feature .case-service-copy {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 1rem;
+        #case-study-feature .svc-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+        }
+        #case-study-feature .svc-desc {
+            font-size: 12px;
+            color: #6a9080;
             line-height: 1.5;
-            max-width: 58ch;
         }
-        #case-study-feature .case-service-media {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            min-height: 260px;
-            background: rgba(0, 0, 0, 0.12);
+        #case-study-feature .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
         }
-        #case-study-feature .case-service-media img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        #case-study-feature .tl-item {
+            display: flex;
+            gap: 16px;
+            padding-bottom: 20px;
+            position: relative;
         }
-        #case-study-feature .case-kpis {
+        #case-study-feature .tl-item:last-child {
+            padding-bottom: 0;
+        }
+        #case-study-feature .tl-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 32px;
+            flex-shrink: 0;
+        }
+        #case-study-feature .tl-dot {
+            width: 10px;
+            height: 10px;
+            background: #4ac878;
+            border-radius: 50%;
+            border: 2px solid #0a1f1a;
+            flex-shrink: 0;
+            margin-top: 4px;
+            z-index: 1;
+        }
+        #case-study-feature .tl-line {
+            width: 1px;
+            flex: 1;
+            background: rgba(74, 200, 120, 0.25);
+            margin-top: 4px;
+        }
+        #case-study-feature .tl-item:last-child .tl-line {
+            display: none;
+        }
+        #case-study-feature .tl-week {
+            font-size: 11px;
+            color: #4ac878;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        #case-study-feature .tl-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        #case-study-feature .tl-desc {
+            font-size: 13px;
+            color: #6a9080;
+            line-height: 1.5;
+        }
+        #case-study-feature .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 0.9rem;
-            align-items: stretch;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
         }
-        #case-study-feature .case-kpi {
-            border-radius: 18px;
-            padding: 1rem;
-            height: 100%;
+        #case-study-feature .res-card {
+            background: rgba(74, 200, 120, 0.08);
+            border: 1px solid rgba(74, 200, 120, 0.25);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
         }
-        #case-study-feature .case-quote {
-            border-left: 3px solid var(--bs-primary);
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 1rem 1.1rem;
-            color: rgba(255, 255, 255, 0.86);
+        #case-study-feature .res-number {
+            font-size: 28px;
+            font-weight: 500;
+            color: #4ac878;
+            line-height: 1.1;
         }
-        @media (max-width: 991.98px) {
-            #case-study-feature .case-problem-block,
-            #case-study-feature .case-build-block,
-            #case-study-feature .case-results-block {
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-            }
+        #case-study-feature .res-label {
+            font-size: 12px;
+            color: #5a9070;
+            margin-top: 4px;
+            line-height: 1.4;
         }
-        @media (max-width: 767.98px) {
-            #case-study-feature .case-service-row,
-            #case-study-feature .case-kpis {
+        #case-study-feature .quote-block {
+            border-left: 3px solid #4ac878;
+            padding: 16px 20px;
+            background: rgba(74, 200, 120, 0.06);
+            border-radius: 0 10px 10px 0;
+            margin-top: 24px;
+        }
+        #case-study-feature .quote-text {
+            font-size: 15px;
+            color: #c2dbd3;
+            line-height: 1.7;
+            font-style: italic;
+            margin: 0;
+        }
+        #case-study-feature .quote-author {
+            font-size: 13px;
+            color: #4ac878;
+            margin-top: 10px;
+            font-style: normal;
+        }
+        @media (max-width: 640px) {
+            #case-study-feature .project-card {
                 grid-template-columns: 1fr;
-            }
-            #case-study-feature .case-service-row.is-reverse .case-service-content,
-            #case-study-feature .case-service-row.is-reverse .case-service-media {
-                order: initial;
-            }
-            #case-study-feature .case-service-media {
-                min-height: 210px;
             }
         }
         .btn-outline-white {
@@ -1427,134 +1520,202 @@
         <div id="case-study-feature" class="section panel overflow-hidden bg-tertiary-800">
             <div class="section-outer panel py-6 lg:py-8 xl:py-10">
                 <div class="container">
-                    <div class="section-inner panel vstack gap-6">
+                    <div class="section-inner panel">
+                        <div class="cs-wrap">
+                            <div style="text-align: center;">
+                                <div class="pill-badge">
+                                    <span class="pill-dot"></span>
+                                    Featured Case Study
+                                </div>
+                            </div>
 
-                        <div class="panel vstack items-center gap-2 max-w-850px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
-                            <span class="case-feature-pill fs-7 fw-medium">Featured Case Study</span>
-                            <h2 class="case-headline h3 lg:h2 m-0 text-white">
-                                A Restaurant Rebuild Told as a <span class="text-primary">Transformation Story</span>
-                            </h2>
-                            <p class="fs-6 text-gray-300 max-w-750px">Instead of another generic before-and-after card, this case study walks through the actual journey: what was broken, what we built, and what changed in the business.</p>
-                        </div>
+                            <h2 class="cs-headline">A Restaurant Rebuild Told as a <span>Transformation Story</span></h2>
+                            <p class="cs-sub">Instead of another generic before-and-after card, this case study walks through the actual journey: what was broken, what we built, and what changed in the business.</p>
 
-                        <div class="case-intro-strip panel" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
-                            <div class="row child-cols-12 lg:child-cols-3 g-3 lg:g-4 items-center">
-                                <div class="lg:col-2">
-                                    <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Urban Flame Bistro</span>
+                            <div class="project-card">
+                                <span class="project-label">Balkan Grill House</span>
+                                <div>
+                                    <div class="project-detail-label">Location &amp; Type</div>
+                                    <div class="project-detail-val">Prague, Czech Republic — Mid-size dine-in &amp; delivery restaurant, 80 seats, operating 6 years</div>
+                                    <div class="project-detail-label" style="margin-top: 12px;">Services Delivered</div>
+                                    <div class="services-tag-row">
+                                        <span class="stag">Branding</span>
+                                        <span class="stag">Website</span>
+                                        <span class="stag">Mobile App</span>
+                                        <span class="stag">Custom SaaS</span>
+                                        <span class="stag">AI Tools</span>
+                                        <span class="stag">Own Ordering System</span>
+                                        <span class="stag">Loyalty Platform</span>
+                                        <span class="stag">SEO</span>
+                                        <span class="stag">Social Media</span>
+                                        <span class="stag">Photography</span>
+                                    </div>
                                 </div>
                                 <div>
-                                    <p class="fs-6 text-white m-0">Project Scope: Branding + Website + Marketing + Custom SaaS + Booking System + Mobile App</p>
-                                </div>
-                                <div>
-                                    <p class="fs-6 text-gray-300 m-0">8-week transformation from fragmented tools to one integrated direct-revenue engine.</p>
+                                    <div class="project-detail-label">Duration &amp; Outcome</div>
+                                    <div class="project-detail-val">10-week transformation — from fragmented tools and third-party dependency to a fully owned, direct-revenue machine.</div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="case-problem-block panel" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 250;">
-                            <div class="vstack gap-3">
-                                <span class="case-label problem">The Problem</span>
-                                <h3 class="h3 m-0 text-white">The restaurant looked busy, but its system was leaking profit every day</h3>
-                                <ul class="case-bullets problem list-none m-0 ps-0">
-                                    <li><i class="icon icon-1 unicon-close"></i><span>Delivery apps were taking too much margin from high-frequency orders.</span></li>
-                                    <li><i class="icon icon-1 unicon-close"></i><span>Branding and digital touchpoints looked inconsistent and forgettable.</span></li>
-                                    <li><i class="icon icon-1 unicon-close"></i><span>The website was not converting visitors into direct bookings or first-party data.</span></li>
-                                    <li><i class="icon icon-1 unicon-close"></i><span>No structured retention engine existed for repeat guests and remarketing.</span></li>
+                            <div class="section-block">
+                                <span class="block-label label-red">The Problem</span>
+                                <h3 class="block-h">The restaurant looked busy — but the system was quietly bleeding money every single day</h3>
+                                <ul class="x-list">
+                                    <li>
+                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="#e06060" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                                        Bolt Food and Wolt were taking 28–32% commission on every delivery order — costing the owner over €3,200/month in pure platform fees.
+                                    </li>
+                                    <li>
+                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="#e06060" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                                        The website was a 4-year-old template with no online booking, no ordering, and not a single call-to-action that worked. It ranked on page 4 of Google.
+                                    </li>
+                                    <li>
+                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="#e06060" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                                        The brand had no identity — the logo, menu, social media, and signage all looked like they came from different businesses. No consistency, no memorability.
+                                    </li>
+                                    <li>
+                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="#e06060" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                                        There was zero customer retention system. No loyalty program, no email list, no way to bring a guest back after their first visit.
+                                    </li>
+                                    <li>
+                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="#e06060" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                                        Staff scheduling was done on paper. Inventory was tracked in Excel. The owner was spending 3+ hours a day on operational admin instead of running the business.
+                                    </li>
+                                    <li>
+                                        <span class="x-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="#e06060" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                                        Google reviews were being ignored. 14 unanswered 3-star reviews sat live — silently killing new customer trust.
+                                    </li>
                                 </ul>
                             </div>
-                        </div>
 
-                        <div class="case-build-block panel vstack gap-3" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
-                            <span class="case-label build">What We Built</span>
-                            <h3 class="h3 m-0 text-white">We rebuilt the full customer journey, not just a website</h3>
-                            <div class="case-service-list">
-                                <article class="case-service-row">
-                                    <div class="case-service-content">
-                                        <span class="case-service-kicker"><i class="icon unicon-color-palette"></i> Branding</span>
-                                        <h4 class="case-service-title">Branding Refresh</h4>
-                                        <p class="case-service-copy">A sharper visual system and menu language to match a premium dining experience.</p>
+                            <div class="section-block">
+                                <span class="block-label label-blue">What We Built</span>
+                                <h3 class="block-h">A complete digital and operational rebuild — every service chosen to solve a specific problem</h3>
+                                <div class="service-grid">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                                            <span class="svc-name">Full Brand Identity</span>
+                                        </div>
+                                        <p class="svc-desc">New logo, color system, typography, photography direction, and brand voice. Every touchpoint now looks and feels like one brand.</p>
                                     </div>
-                                    <div class="case-service-media">
-                                        <img src="./assets/page-services-CQ8pT1D9.jpg" alt="Branding and services page screenshot">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                                            <span class="svc-name">Custom Website</span>
+                                        </div>
+                                        <p class="svc-desc">Mobile-first, SEO-optimized site with direct table booking, digital menus, and a contact funnel. Ranked on Google Page 1 in 6 weeks.</p>
                                     </div>
-                                </article>
-
-                                <article class="case-service-row is-reverse">
-                                    <div class="case-service-content">
-                                        <span class="case-service-kicker"><i class="icon unicon-laptop"></i> Website</span>
-                                        <h4 class="case-service-title">Conversion-Led Website</h4>
-                                        <p class="case-service-copy">A direct-conversion website focused on reservations, orders, and lead capture.</p>
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+                                            <span class="svc-name">Restaurant Mobile App</span>
+                                        </div>
+                                        <p class="svc-desc">iOS &amp; Android app with direct ordering, table reservations, loyalty points, and push notifications. Zero commission. 100% their data.</p>
                                     </div>
-                                    <div class="case-service-media">
-                                        <img src="./assets/page-services-detail-BvKZUna4.jpg" alt="Website service detail screenshot">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+                                            <span class="svc-name">Own Ordering System</span>
+                                        </div>
+                                        <p class="svc-desc">Custom white-label ordering platform replacing Bolt Food and Wolt for direct orders. Saved €3,200/month from day one of launch.</p>
                                     </div>
-                                </article>
-
-                                <article class="case-service-row">
-                                    <div class="case-service-content">
-                                        <span class="case-service-kicker"><i class="icon unicon-rocket"></i> Marketing</span>
-                                        <h4 class="case-service-title">Marketing Growth Engine</h4>
-                                        <p class="case-service-copy">Local SEO, paid ads, and retargeting campaigns to bring guests back consistently.</p>
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                                            <span class="svc-name">Loyalty &amp; CRM Platform</span>
+                                        </div>
+                                        <p class="svc-desc">AI-powered loyalty system that tracks visits, sends automated re-engagement messages, and predicts which customers are about to churn.</p>
                                     </div>
-                                    <div class="case-service-media">
-                                        <img src="./assets/page-features-D7ghS6nP.jpg" alt="Marketing and features screenshot">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                                            <span class="svc-name">AI Chatbot &amp; Booking Agent</span>
+                                        </div>
+                                        <p class="svc-desc">24/7 AI assistant on the website and app — handles reservations, answers FAQs, recommends dishes, and collects guest data automatically.</p>
                                     </div>
-                                </article>
-
-                                <article class="case-service-row is-reverse">
-                                    <div class="case-service-content">
-                                        <span class="case-service-kicker"><i class="icon unicon-layers"></i> SaaS</span>
-                                        <h4 class="case-service-title">TablePulse SaaS Dashboard</h4>
-                                        <p class="case-service-copy">Custom TablePulse dashboard predicting no-shows and triggering fill-rate offers by timeslot.</p>
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+                                            <span class="svc-name">Restaurant SaaS Dashboard</span>
+                                        </div>
+                                        <p class="svc-desc">One custom management panel for sales, inventory, staff scheduling, loyalty analytics, and reviews — replacing 7 disconnected tools.</p>
                                     </div>
-                                    <div class="case-service-media">
-                                        <img src="./assets/page-integrations-BerjrkOL.jpg" alt="SaaS integrations dashboard screenshot">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                                            <span class="svc-name">AI Review Management</span>
+                                        </div>
+                                        <p class="svc-desc">AI auto-responds to Google &amp; TripAdvisor reviews with brand-consistent replies. All 14 old negative reviews addressed within 48 hours of launch.</p>
                                     </div>
-                                </article>
-
-                                <article class="case-service-row">
-                                    <div class="case-service-content">
-                                        <span class="case-service-kicker"><i class="icon unicon-calendar"></i> Booking</span>
-                                        <h4 class="case-service-title">Direct Booking System</h4>
-                                        <p class="case-service-copy">Direct reservations with reminders, table logic, and profile-based guest tracking.</p>
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                                            <span class="svc-name">AI Inventory &amp; Waste AI</span>
+                                        </div>
+                                        <p class="svc-desc">Demand forecasting AI that reduced food waste by 31% in the first month by predicting daily cover counts and adjusting prep quantities.</p>
                                     </div>
-                                    <div class="case-service-media">
-                                        <img src="./assets/page-contact-iMkLQlkz.jpg" alt="Booking and contact workflow screenshot">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+                                            <span class="svc-name">Local SEO &amp; Google Ads</span>
+                                        </div>
+                                        <p class="svc-desc">Full Google Business optimization, local keyword targeting, and paid ad campaigns. Organic impressions up 380% in 8 weeks.</p>
                                     </div>
-                                </article>
-
-                                <article class="case-service-row is-reverse">
-                                    <div class="case-service-content">
-                                        <span class="case-service-kicker"><i class="icon unicon-mobile"></i> Mobile App</span>
-                                        <h4 class="case-service-title">Loyalty Mobile App</h4>
-                                        <p class="case-service-copy">Loyalty-first app for repeat orders, push campaigns, and one-tap rebooking.</p>
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+                                            <span class="svc-name">Social Media System</span>
+                                        </div>
+                                        <p class="svc-desc">Monthly content calendar, branded templates, reels scripts, and UGC strategy. Instagram follower growth of 2,100 in first 60 days.</p>
                                     </div>
-                                    <div class="case-service-media">
-                                        <img src="./assets/page-pricing-BZQbIJd2.jpg" alt="Mobile app and pricing experience screenshot">
+                                    <div class="svc-card">
+                                        <div class="svc-icon-row">
+                                            <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+                                            <span class="svc-name">Pro Photography &amp; Menu Design</span>
+                                        </div>
+                                        <p class="svc-desc">Full food photography shoot + redesigned print &amp; QR digital menus. New menus increased average order value by €4.20 per table.</p>
                                     </div>
-                                </article>
-                            </div>
-                        </div>
-
-                        <div class="case-results-block panel" data-anime="onview: -150; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;">
-                            <div class="vstack gap-3">
-                                <span class="case-label result">The Result</span>
-                                <h3 class="h3 m-0 text-white">A restaurant that now owns demand, data, and repeat revenue</h3>
-                                <div class="case-kpis">
-                                    <div class="case-kpi"><div class="fs-7 text-gray-400 mb-1">Direct bookings</div><div class="h4 m-0 text-primary">+214%</div></div>
-                                    <div class="case-kpi"><div class="fs-7 text-gray-400 mb-1">Delivery fees saved</div><div class="h4 m-0 text-primary">€39K/year</div></div>
-                                    <div class="case-kpi"><div class="fs-7 text-gray-400 mb-1">Repeat customer rate</div><div class="h4 m-0 text-primary">+61%</div></div>
-                                    <div class="case-kpi"><div class="fs-7 text-gray-400 mb-1">Monthly revenue</div><div class="h4 m-0 text-primary">+47%</div></div>
                                 </div>
-                                <ul class="case-bullets result list-none m-0 ps-0">
-                                    <li><i class="icon icon-1 unicon-checkmark"></i><span>The team moved from channel chaos to one clear growth system.</span></li>
-                                    <li><i class="icon icon-1 unicon-checkmark"></i><span>The owner now has visibility into demand, retention, and campaign performance.</span></li>
-                                    <li><i class="icon icon-1 unicon-checkmark"></i><span>Growth is no longer random; it is measured, repeatable, and margin-friendly.</span></li>
-                                </ul>
-                                <div class="case-quote">"Before, we were busy but blind. Now every channel points to direct customer value, and our numbers finally make sense."</div>
+                            </div>
+
+                            <div class="section-block">
+                                <span class="block-label label-amber">How We Did It — Week by Week</span>
+                                <h3 class="block-h">10 weeks. One team. Complete ownership.</h3>
+                                <div class="timeline">
+                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 1–2</div><div class="tl-title">Discovery, Audit &amp; Strategy</div><div class="tl-desc">We audited every digital touchpoint — website, Google ranking, delivery app dependency, social profiles, branding, and internal tools. Presented a full transformation roadmap with clear ROI projections before a single line of code was written.</div></div></div>
+                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 3–4</div><div class="tl-title">Brand Identity &amp; Photography</div><div class="tl-desc">Designed full brand system: logo, color palette, typography, and tone of voice. On-site photography shoot produced 80+ images used across all channels. New menus designed — print and QR digital version.</div></div></div>
+                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 4–6</div><div class="tl-title">Website, Ordering System &amp; SEO</div><div class="tl-desc">Launched the new custom website with integrated direct ordering, table reservations, and SEO structure. Within 3 weeks, 12 target keywords moved to page 1 of Google.</div></div></div>
+                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 6–8</div><div class="tl-title">Mobile App, AI Tools &amp; Loyalty Platform</div><div class="tl-desc">Deployed iOS and Android app with loyalty points and push notifications. Activated the AI chatbot for reservations and the AI review management system. All 14 unanswered Google reviews responded to within 48 hours.</div></div></div>
+                                    <div class="tl-item"><div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-week">Week 8–10</div><div class="tl-title">SaaS Dashboard, Inventory AI &amp; Go-Live</div><div class="tl-desc">Launched the custom management dashboard replacing all disconnected tools. Inventory AI went live — reducing daily food waste from the first week. Full team training completed. Paid ad campaigns launched on Meta and Google.</div></div></div>
+                                </div>
+                            </div>
+
+                            <div class="section-block">
+                                <span class="block-label label-green">The Results</span>
+                                <h3 class="block-h">60 days after launch</h3>
+                                <div class="results-grid">
+                                    <div class="res-card"><div class="res-number">€3,800</div><div class="res-label">saved per month by eliminating delivery app commissions</div></div>
+                                    <div class="res-card"><div class="res-number">+167%</div><div class="res-label">increase in direct online orders via own app and website</div></div>
+                                    <div class="res-card"><div class="res-number">31%</div><div class="res-label">reduction in food waste using the inventory AI</div></div>
+                                    <div class="res-card"><div class="res-number">4.8★</div><div class="res-label">Google rating, up from 3.9★ — reviews actively managed</div></div>
+                                    <div class="res-card"><div class="res-number">2,100+</div><div class="res-label">new Instagram followers in the first 60 days</div></div>
+                                    <div class="res-card"><div class="res-number">€4.20</div><div class="res-label">increase in average order value per table after menu redesign</div></div>
+                                    <div class="res-card"><div class="res-number">380%</div><div class="res-label">increase in organic Google impressions in 8 weeks</div></div>
+                                    <div class="res-card"><div class="res-number">3 hrs</div><div class="res-label">of daily admin time saved using the SaaS management dashboard</div></div>
+                                </div>
+
+                                <div class="quote-block">
+                                    <p class="quote-text">"I knew we had problems, but I didn't realize how much money we were leaving on the table every single month. The delivery app fees alone were paying for this entire project twice over. Now we own our customers, our data, and our revenue. I only wish we had done this two years earlier."</p>
+                                    <p class="quote-author">— Miroslav K., Owner, Balkan Grill House, Prague</p>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 32px;">
+                                <p style="font-size: 13px; color: #5a7a6e; margin-bottom: 16px;">Want results like these for your restaurant?</p>
+                                <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary rounded-pill px-6">Book My Free Strategy Call ↗</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
