@@ -173,12 +173,33 @@
         .hero-cta-buttons .btn {
             min-height: 56px;
         }
+        .hero-cta-buttons {
+            width: fit-content;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            justify-content: center;
+        }
         #final-cta .final-cta-button {
             width: 100%;
         }
         .hero-cta-buttons .btn .icon,
         #final-cta .final-cta-button .icon {
             margin: 0 !important;
+        }
+        .hero-title {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-title-line {
+            display: block;
+        }
+        @media (max-width: 991.98px) {
+            .hero-cta-buttons {
+                width: 100%;
+            }
         }
         #faq .uc-accordion > li {
             background: transparent !important;
@@ -376,10 +397,10 @@
                             </div>
 
                             <!-- Headline -->
-                            <h1 class="h2 lg:h1 xl:display-3 m-0 lh-sm">
-                                <span class="text-white">We Help Restaurants</span>
-                                <span class="text-primary d-block">Fill Tables, Kill Third-Party Fees,</span>
-                                <span class="text-white d-block">and Dominate Their City</span>
+                            <h1 class="hero-title h2 lg:h1 xl:display-3 m-0 lh-sm">
+                                <span class="hero-title-line text-white">We Help Restaurants</span>
+                                <span class="hero-title-line text-primary">Fill Tables, Kill Third-Party Fees,</span>
+                                <span class="hero-title-line text-white">and Dominate Their City</span>
                             </h1>
                             
                             <!-- Subheadline -->
@@ -388,7 +409,7 @@
                             </p>
 
                             <!-- CTA Buttons -->
-                            <div class="panel vstack sm:hstack gap-2 lg:gap-3 mt-2 hero-cta-buttons">
+                            <div class="panel vstack sm:hstack gap-2 lg:gap-3 mt-2 hero-cta-buttons justify-center">
                                 <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary px-4 lg:px-6 rounded-pill">
                                     <i class="icon icon-1 unicon-calendar me-1"></i> Book Your Free Strategy Call
                                 </a>
