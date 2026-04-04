@@ -67,6 +67,12 @@
       ]
     }
   ],
+  "rewrites": [
+    {
+      "source": "/restaurants",
+      "destination": "/restaurants.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",
