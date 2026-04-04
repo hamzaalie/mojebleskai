@@ -152,6 +152,107 @@
             border-color: var(--bs-primary) !important;
             background: linear-gradient(45deg, rgba(24, 141, 114, 0.24), transparent) !important;
         }
+        #who-for .qualification-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(21, 53, 63, 0.98), rgba(10, 34, 41, 0.98)) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        #who-for .qualification-card::before {
+            content: "";
+            position: absolute;
+            inset: -20% auto auto -10%;
+            width: 220px;
+            height: 220px;
+            border-radius: 999px;
+            filter: blur(12px);
+            opacity: 0.18;
+            pointer-events: none;
+        }
+        #who-for .qualification-card.is-fit::before {
+            background: var(--bs-primary);
+        }
+        #who-for .qualification-card.not-fit::before {
+            background: #ff5b5b;
+        }
+        #who-for .qualification-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        #who-for .qualification-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        #who-for .qualification-label.is-fit {
+            background: rgba(185, 255, 159, 0.14);
+            color: #c7ffb1;
+        }
+        #who-for .qualification-label.not-fit {
+            background: rgba(255, 91, 91, 0.12);
+            color: #ff8d8d;
+        }
+        #who-for .qualification-items {
+            display: grid;
+            gap: 0.85rem;
+        }
+        #who-for .qualification-item {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 0.85rem;
+            align-items: center;
+            padding: 0.95rem 1rem;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        #who-for .qualification-item.is-fit {
+            background: linear-gradient(90deg, rgba(185, 255, 159, 0.1), rgba(255, 255, 255, 0.02));
+        }
+        #who-for .qualification-item.not-fit {
+            background: linear-gradient(90deg, rgba(255, 91, 91, 0.08), rgba(255, 255, 255, 0.02));
+        }
+        #who-for .qualification-item-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            flex-shrink: 0;
+        }
+        #who-for .qualification-item.is-fit .qualification-item-icon {
+            background: rgba(185, 255, 159, 0.14);
+            color: #c7ffb1;
+        }
+        #who-for .qualification-item.not-fit .qualification-item-icon {
+            background: rgba(255, 91, 91, 0.12);
+            color: #ff8d8d;
+        }
+        #who-for .qualification-item-text {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1rem;
+            line-height: 1.45;
+        }
+        #who-for .qualification-card .panel-note {
+            border-radius: 16px;
+            padding: 1rem 1.1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        #who-for .qualification-card.is-fit .panel-note {
+            background: rgba(185, 255, 159, 0.08);
+            color: rgba(255, 255, 255, 0.78);
+        }
+        #who-for .qualification-card.not-fit .panel-note {
+            background: rgba(255, 91, 91, 0.08);
+            color: rgba(255, 255, 255, 0.72);
+        }
         .btn-outline-white {
             color: #ffffff !important;
             border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -1095,54 +1196,69 @@
                                 Is This Right For Your Restaurant?<br>
                                 <span class="text-primary">Here's The Honest Answer</span>
                             </h2>
+                            <p class="fs-6 text-gray-300 max-w-650px">We do our best work with operators who want a real growth system, not a cheap one-week patch.</p>
                         </div>
 
                         <div class="row child-cols-12 lg:child-cols-6 g-6 col-match">
 
                             <!-- Perfect Fit -->
                             <div>
-                                <div class="panel p-6 h-100 bg-tertiary-700 border-2 border-primary rounded-2" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
-                                    <div class="vstack gap-4">
-                                        <div class="hstack gap-3">
-                                            <div class="cstack w-56px h-56px rounded-circle bg-primary text-dark">
-                                                <i class="icon icon-2 unicon-checkmark"></i>
+                                <div class="qualification-card is-fit panel p-5 lg:p-6 h-100 rounded-2" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
+                                    <div class="vstack gap-4 lg:gap-5">
+                                        <div class="vstack gap-3">
+                                            <span class="qualification-label is-fit">Best Fit</span>
+                                            <div class="hstack gap-3 items-center">
+                                                <div class="cstack w-64px h-64px rounded-circle bg-primary text-dark flex-shrink-0">
+                                                    <i class="icon icon-2 unicon-checkmark"></i>
+                                                </div>
+                                                <div class="vstack gap-1">
+                                                    <h3 class="h4 m-0 text-white">This Is For You If</h3>
+                                                    <p class="fs-6 text-gray-300 m-0">You want to own the customer relationship, reduce third-party dependence, and build long-term restaurant value.</p>
+                                                </div>
                                             </div>
-                                            <h3 class="h5 m-0 text-white">✅ This IS For You If:</h3>
                                         </div>
-                                        <ul class="vstack gap-3 fs-6 text-gray-200 m-0 ps-0 list-none">
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You're tired of losing 25-30% to delivery apps</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You want full control of your customer data</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You're ready to invest in long-term growth</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You value quality over the cheapest option</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You're doing €10K+ monthly revenue</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You want a tech partner, not just a vendor</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You're open to new technology and innovation</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-check text-primary"></i><span>You understand that digital transformation takes time</span></li>
-                                        </ul>
+                                        <div class="qualification-items">
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-cart"></i></span><span class="qualification-item-text">You're tired of losing 25-30% to delivery apps</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-locked"></i></span><span class="qualification-item-text">You want full control of your customer data</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-growth"></i></span><span class="qualification-item-text">You're ready to invest in long-term growth</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-certificate"></i></span><span class="qualification-item-text">You value quality over the cheapest option</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-chart-line-data"></i></span><span class="qualification-item-text">You're doing €10K+ monthly revenue</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-partnership"></i></span><span class="qualification-item-text">You want a tech partner, not just a vendor</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-idea"></i></span><span class="qualification-item-text">You're open to new technology and innovation</span></div>
+                                            <div class="qualification-item is-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-time"></i></span><span class="qualification-item-text">You understand that digital transformation takes time</span></div>
+                                        </div>
+                                        <div class="panel-note">You do not need to be perfect. You just need to be serious about fixing the leaks and building the right system.</div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Not a Fit -->
                             <div>
-                                <div class="panel p-6 h-100 bg-tertiary-700 border border-danger border-opacity-30 rounded-2" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
-                                    <div class="vstack gap-4">
-                                        <div class="hstack gap-3">
-                                            <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                                <i class="icon icon-2 unicon-close text-danger"></i>
+                                <div class="qualification-card not-fit panel p-5 lg:p-6 h-100 rounded-2" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 300;">
+                                    <div class="vstack gap-4 lg:gap-5">
+                                        <div class="vstack gap-3">
+                                            <span class="qualification-label not-fit">Not A Match</span>
+                                            <div class="hstack gap-3 items-center">
+                                                <div class="cstack w-64px h-64px rounded-circle bg-danger bg-opacity-15 text-danger flex-shrink-0">
+                                                    <i class="icon icon-2 unicon-close"></i>
+                                                </div>
+                                                <div class="vstack gap-1">
+                                                    <h3 class="h4 m-0 text-white">This Is Not For You If</h3>
+                                                    <p class="fs-6 text-gray-300 m-0">We are not the right fit if you're looking for the cheapest possible build with no strategy, no commitment, and no patience.</p>
+                                                </div>
                                             </div>
-                                            <h3 class="h5 m-0 text-white">❌ This is NOT For You If:</h3>
                                         </div>
-                                        <ul class="vstack gap-3 fs-6 text-gray-300 m-0 ps-0 list-none">
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You just want a basic €500 template website</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You're not willing to invest in your business</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You expect results without putting in any effort</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You're doing less than €5K monthly revenue</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You want the cheapest option available</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You're not serious about growing</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You need something built "yesterday"</span></li>
-                                            <li class="hstack gap-2"><i class="icon unicon-times text-danger"></i><span>You're resistant to change and new systems</span></li>
-                                        </ul>
+                                        <div class="qualification-items">
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-laptop"></i></span><span class="qualification-item-text">You just want a basic €500 template website</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-stop"></i></span><span class="qualification-item-text">You're not willing to invest in your business</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-lightning"></i></span><span class="qualification-item-text">You expect results without putting in any effort</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-chart-line-data"></i></span><span class="qualification-item-text">You're doing less than €5K monthly revenue</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-tag"></i></span><span class="qualification-item-text">You want the cheapest option available</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-close"></i></span><span class="qualification-item-text">You're not serious about growing</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-time"></i></span><span class="qualification-item-text">You need something built "yesterday"</span></div>
+                                            <div class="qualification-item not-fit"><span class="qualification-item-icon"><i class="icon icon-1 unicon-split"></i></span><span class="qualification-item-text">You're resistant to change and new systems</span></div>
+                                        </div>
+                                        <div class="panel-note">If you need a low-effort, lowest-cost shortcut, we would rather be honest now than disappoint you later.</div>
                                     </div>
                                 </div>
                             </div>
