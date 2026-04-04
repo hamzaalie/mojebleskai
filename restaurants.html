@@ -254,71 +254,170 @@
             color: rgba(255, 255, 255, 0.72);
         }
         #case-study-feature .case-study-shell {
-            background: linear-gradient(180deg, rgba(18, 51, 60, 0.98), rgba(9, 29, 36, 0.98));
+            background:
+                radial-gradient(circle at top left, rgba(185, 255, 159, 0.12), transparent 28%),
+                linear-gradient(180deg, rgba(16, 45, 53, 0.98), rgba(8, 25, 31, 0.98));
             border: 1px solid rgba(255, 255, 255, 0.12);
             overflow: hidden;
         }
-        #case-study-feature .case-study-problem,
-        #case-study-feature .case-study-results,
-        #case-study-feature .case-study-build-item {
-            background: rgba(255, 255, 255, 0.03);
+        #case-study-feature .case-study-side {
+            position: relative;
+            height: 100%;
+            padding: 1.5rem;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        #case-study-feature .case-study-build-grid {
+        #case-study-feature .case-study-side::before {
+            content: "";
+            position: absolute;
+            inset: auto -10% -25% auto;
+            width: 220px;
+            height: 220px;
+            border-radius: 999px;
+            background: rgba(185, 255, 159, 0.12);
+            filter: blur(18px);
+            pointer-events: none;
+        }
+        #case-study-feature .case-study-side > * {
+            position: relative;
+            z-index: 1;
+        }
+        #case-study-feature .case-study-side-metrics {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1rem;
+            gap: 0.85rem;
         }
-        #case-study-feature .case-study-build-item {
-            border-radius: 20px;
-            padding: 1rem;
-            height: 100%;
+        #case-study-feature .case-study-side-metric {
+            padding: 1rem 1.1rem;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        #case-study-feature .case-study-build-item .icon-wrap,
-        #case-study-feature .case-study-problem .icon-wrap {
+        #case-study-feature .case-study-story {
+            position: relative;
+            display: grid;
+            gap: 1.25rem;
+        }
+        #case-study-feature .case-study-stage {
+            position: relative;
+            padding: 1.35rem 1.35rem 1.35rem 5rem;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        #case-study-feature .case-study-stage-number {
+            position: absolute;
+            top: 1.25rem;
+            left: 1.25rem;
             width: 52px;
             height: 52px;
             border-radius: 16px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: rgba(185, 255, 159, 0.12);
-            color: var(--bs-primary);
-            flex-shrink: 0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #071d22;
+            background: var(--bs-primary);
         }
-        #case-study-feature .case-study-problem-list,
-        #case-study-feature .case-study-result-list {
+        #case-study-feature .case-study-story-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+        #case-study-feature .case-study-story-label.problem {
+            background: rgba(255, 91, 91, 0.12);
+            color: #ff9898;
+        }
+        #case-study-feature .case-study-story-label.build {
+            background: rgba(185, 255, 159, 0.12);
+            color: #c7ffb1;
+        }
+        #case-study-feature .case-study-story-label.result {
+            background: rgba(82, 205, 255, 0.12);
+            color: #9de7ff;
+        }
+        #case-study-feature .case-study-bullet-list {
             display: grid;
             gap: 0.85rem;
         }
-        #case-study-feature .case-study-problem-list li,
-        #case-study-feature .case-study-result-list li {
+        #case-study-feature .case-study-bullet-list li {
             display: grid;
-            grid-template-columns: 24px 1fr;
+            grid-template-columns: 22px 1fr;
             gap: 0.75rem;
             align-items: start;
             color: rgba(255, 255, 255, 0.8);
         }
-        #case-study-feature .case-study-problem-list i {
-            color: #ff8d8d;
+        #case-study-feature .case-study-bullet-list.problem li i {
+            color: #ff9898;
         }
-        #case-study-feature .case-study-result-list i {
+        #case-study-feature .case-study-bullet-list.result li i {
             color: #c7ffb1;
         }
-        #case-study-feature .case-study-metrics {
+        #case-study-feature .case-study-solutions {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1rem;
+            gap: 0.9rem;
         }
-        #case-study-feature .case-study-metric {
+        #case-study-feature .case-study-solution {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 0.85rem;
+            padding: 1rem;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        #case-study-feature .case-study-solution-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(185, 255, 159, 0.12);
+            color: var(--bs-primary);
+        }
+        #case-study-feature .case-study-kpis {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+        #case-study-feature .case-study-kpi {
             padding: 1rem;
             border-radius: 18px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
+        #case-study-feature .case-study-quote {
+            padding: 1rem 1.1rem;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--bs-primary);
+            color: rgba(255, 255, 255, 0.86);
+        }
+        @media (max-width: 991.98px) {
+            #case-study-feature .case-study-kpis {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
         @media (max-width: 767.98px) {
-            #case-study-feature .case-study-build-grid,
-            #case-study-feature .case-study-metrics {
+            #case-study-feature .case-study-stage {
+                padding: 4.75rem 1rem 1rem;
+            }
+            #case-study-feature .case-study-stage-number {
+                top: 1rem;
+                left: 1rem;
+            }
+            #case-study-feature .case-study-solutions,
+            #case-study-feature .case-study-kpis {
                 grid-template-columns: 1fr;
             }
         }
@@ -1266,115 +1365,119 @@
                         <div class="panel vstack items-center gap-2 max-w-850px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
                             <span class="fs-7 fw-medium py-narrow px-3 bg-primary text-dark rounded-pill">Featured Case Study</span>
                             <h2 class="h3 lg:h2 m-0 text-white">
-                                From Delivery-App Dependence to a <span class="text-primary">Full Direct Revenue Engine</span>
+                                A Restaurant Rebuild Told as a <span class="text-primary">Transformation Story</span>
                             </h2>
-                            <p class="fs-6 text-gray-300 max-w-750px">A mid-sized restaurant had solid food and foot traffic, but the business was leaking profit, missing repeat customers, and running on disconnected systems.</p>
+                            <p class="fs-6 text-gray-300 max-w-750px">Instead of another generic before-and-after card, this case study walks through the actual journey: what was broken, what we built, and what changed in the business.</p>
                         </div>
 
                         <div class="case-study-shell panel p-4 lg:p-6 xl:p-8 rounded-3" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 600; delay: 200;">
-                            <div class="row child-cols-12 lg:child-cols-5 g-4 lg:g-6">
-
+                            <div class="row child-cols-12 lg:child-cols-4 g-4 lg:g-5">
                                 <div>
-                                    <div class="case-study-problem panel p-4 lg:p-5 rounded-2 h-100 vstack gap-4">
-                                        <div class="vstack gap-3">
-                                            <span class="fs-7 fw-medium py-narrow px-3 bg-danger bg-opacity-15 text-danger rounded-pill w-fit">The Problem</span>
-                                            <h3 class="h4 m-0 text-white">A busy restaurant with weak systems behind the scenes</h3>
-                                            <p class="fs-6 text-gray-300 m-0">The owner was doing decent volume, but margins were getting crushed and the brand was not strong enough to turn first-time visitors into repeat customers.</p>
+                                    <div class="case-study-side vstack gap-4">
+                                        <div class="vstack gap-2">
+                                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary bg-opacity-15 text-primary rounded-pill w-fit">Urban Flame Bistro</span>
+                                            <h3 class="h3 m-0 text-white">From scattered channels to one direct growth engine</h3>
+                                            <p class="fs-6 text-gray-300 m-0">A city restaurant with strong demand but weak retention, weak systems, and too much margin lost to intermediaries.</p>
                                         </div>
-                                        <ul class="case-study-problem-list list-none m-0 ps-0">
-                                            <li><i class="icon icon-1 unicon-close"></i><span>Too much revenue was disappearing into third-party delivery commissions.</span></li>
-                                            <li><i class="icon icon-1 unicon-close"></i><span>The brand looked inconsistent across the restaurant, socials, and digital touchpoints.</span></li>
-                                            <li><i class="icon icon-1 unicon-close"></i><span>The website was outdated and not built to convert visitors into direct bookings or orders.</span></li>
-                                            <li><i class="icon icon-1 unicon-close"></i><span>There was no real customer database, no loyalty engine, and no predictable remarketing flow.</span></li>
-                                            <li><i class="icon icon-1 unicon-close"></i><span>Bookings, walk-ins, and promotions were managed manually with almost no insight into demand patterns.</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="lg:col-7">
-                                    <div class="panel vstack gap-4 lg:gap-5">
-                                        <div class="vstack gap-3">
-                                            <span class="fs-7 fw-medium py-narrow px-3 bg-primary bg-opacity-15 text-primary rounded-pill w-fit">What We Built</span>
-                                            <h3 class="h4 m-0 text-white">A full-stack restaurant growth system</h3>
-                                        </div>
-
-                                        <div class="case-study-build-grid">
-                                            <div class="case-study-build-item vstack gap-3">
-                                                <span class="icon-wrap"><i class="icon icon-2 unicon-color-palette"></i></span>
-                                                <div class="vstack gap-1">
-                                                    <h4 class="h6 m-0 text-white">Branding Refresh</h4>
-                                                    <p class="fs-7 text-gray-300 m-0">We rebuilt the visual identity, menu presentation, and content direction so the restaurant finally looked premium online and offline.</p>
-                                                </div>
-                                            </div>
-                                            <div class="case-study-build-item vstack gap-3">
-                                                <span class="icon-wrap"><i class="icon icon-2 unicon-laptop"></i></span>
-                                                <div class="vstack gap-1">
-                                                    <h4 class="h6 m-0 text-white">Conversion-Focused Website</h4>
-                                                    <p class="fs-7 text-gray-300 m-0">We launched a fast, direct-response website designed to turn traffic into reservations, orders, and customer data.</p>
-                                                </div>
-                                            </div>
-                                            <div class="case-study-build-item vstack gap-3">
-                                                <span class="icon-wrap"><i class="icon icon-2 unicon-rocket"></i></span>
-                                                <div class="vstack gap-1">
-                                                    <h4 class="h6 m-0 text-white">Marketing Engine</h4>
-                                                    <p class="fs-7 text-gray-300 m-0">We added paid traffic, retargeting, local SEO, and repeat-visit campaigns so growth did not rely on random foot traffic.</p>
-                                                </div>
-                                            </div>
-                                            <div class="case-study-build-item vstack gap-3">
-                                                <span class="icon-wrap"><i class="icon icon-2 unicon-layers"></i></span>
-                                                <div class="vstack gap-1">
-                                                    <h4 class="h6 m-0 text-white">Custom SaaS Layer</h4>
-                                                    <p class="fs-7 text-gray-300 m-0">We built a "TablePulse" owner dashboard that scores no-show risk, tracks table demand by hour, and pushes last-minute offer campaigns automatically.</p>
-                                                </div>
-                                            </div>
-                                            <div class="case-study-build-item vstack gap-3">
-                                                <span class="icon-wrap"><i class="icon icon-2 unicon-calendar"></i></span>
-                                                <div class="vstack gap-1">
-                                                    <h4 class="h6 m-0 text-white">Direct Booking System</h4>
-                                                    <p class="fs-7 text-gray-300 m-0">We replaced messy manual booking flows with a direct reservation system tied into reminders, table capacity, and guest capture.</p>
-                                                </div>
-                                            </div>
-                                            <div class="case-study-build-item vstack gap-3">
-                                                <span class="icon-wrap"><i class="icon icon-2 unicon-mobile"></i></span>
-                                                <div class="vstack gap-1">
-                                                    <h4 class="h6 m-0 text-white">Mobile App</h4>
-                                                    <p class="fs-7 text-gray-300 m-0">We developed a lightweight app for repeat customers with loyalty, quick re-order flows, push offers, and direct booking access.</p>
-                                                </div>
+                                        <div class="panel p-4 rounded-2 bg-tertiary-800 border border-white border-opacity-10">
+                                            <div class="fs-7 text-gray-400 mb-2">Project Scope</div>
+                                            <div class="hstack gap-2 flex-wrap">
+                                                <span class="badge bg-primary text-dark fs-7">Branding</span>
+                                                <span class="badge bg-primary text-dark fs-7">Website</span>
+                                                <span class="badge bg-primary text-dark fs-7">Marketing</span>
+                                                <span class="badge bg-primary text-dark fs-7">SaaS</span>
+                                                <span class="badge bg-primary text-dark fs-7">Bookings</span>
+                                                <span class="badge bg-primary text-dark fs-7">Mobile App</span>
                                             </div>
                                         </div>
-
-                                        <div class="case-study-results panel p-4 lg:p-5 rounded-2 vstack gap-4">
-                                            <div class="vstack gap-2">
-                                                <span class="fs-7 fw-medium py-narrow px-3 bg-primary bg-opacity-15 text-primary rounded-pill w-fit">The Result</span>
-                                                <h3 class="h4 m-0 text-white">More direct revenue, stronger repeat business, and a brand people actually remembered</h3>
+                                        <div class="case-study-side-metrics">
+                                            <div class="case-study-side-metric">
+                                                <div class="fs-7 text-gray-400 mb-1">Delivery fees saved</div>
+                                                <div class="h4 m-0 text-primary">€39K / year</div>
                                             </div>
-                                            <div class="case-study-metrics">
-                                                <div class="case-study-metric">
-                                                    <div class="fs-7 text-gray-400 mb-1">Direct bookings</div>
-                                                    <div class="h4 m-0 text-primary">+214%</div>
-                                                </div>
-                                                <div class="case-study-metric">
-                                                    <div class="fs-7 text-gray-400 mb-1">Delivery fees saved</div>
-                                                    <div class="h4 m-0 text-primary">€39K/year</div>
-                                                </div>
-                                                <div class="case-study-metric">
-                                                    <div class="fs-7 text-gray-400 mb-1">Repeat customer rate</div>
-                                                    <div class="h4 m-0 text-primary">+61%</div>
-                                                </div>
-                                                <div class="case-study-metric">
-                                                    <div class="fs-7 text-gray-400 mb-1">Average monthly revenue</div>
-                                                    <div class="h4 m-0 text-primary">+47%</div>
-                                                </div>
+                                            <div class="case-study-side-metric">
+                                                <div class="fs-7 text-gray-400 mb-1">Direct bookings</div>
+                                                <div class="h4 m-0 text-primary">+214%</div>
                                             </div>
-                                            <ul class="case-study-result-list list-none m-0 ps-0">
-                                                <li><i class="icon icon-1 unicon-checkmark"></i><span>The restaurant stopped depending on marketplaces for growth and started owning the guest relationship directly.</span></li>
-                                                <li><i class="icon icon-1 unicon-checkmark"></i><span>The new app, booking flow, and SaaS dashboard gave the owner real visibility into demand and customer behavior.</span></li>
-                                                <li><i class="icon icon-1 unicon-checkmark"></i><span>What used to be a collection of disconnected tools became one revenue system built around retention, margin, and speed.</span></li>
-                                            </ul>
+                                            <div class="case-study-side-metric">
+                                                <div class="fs-7 text-gray-400 mb-1">Repeat customer rate</div>
+                                                <div class="h4 m-0 text-primary">+61%</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="lg:col-8">
+                                    <div class="case-study-story">
+                                        <div class="case-study-stage">
+                                            <span class="case-study-stage-number">01</span>
+                                            <div class="vstack gap-3">
+                                                <span class="case-study-story-label problem">The Problem</span>
+                                                <h3 class="h4 m-0 text-white">The restaurant looked busy from the outside, but the business underneath was leaking money</h3>
+                                                <ul class="case-study-bullet-list problem list-none m-0 ps-0">
+                                                    <li><i class="icon icon-1 unicon-close"></i><span>Third-party delivery apps were eating margins on every high-volume day.</span></li>
+                                                    <li><i class="icon icon-1 unicon-close"></i><span>The branding felt inconsistent and forgettable across the venue, menus, and online channels.</span></li>
+                                                    <li><i class="icon icon-1 unicon-close"></i><span>The website was not converting traffic into bookings, orders, or owned customer data.</span></li>
+                                                    <li><i class="icon icon-1 unicon-close"></i><span>The team had no real system for loyalty, reactivation, or understanding table demand by hour.</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="case-study-stage">
+                                            <span class="case-study-stage-number">02</span>
+                                            <div class="vstack gap-3">
+                                                <span class="case-study-story-label build">What We Built</span>
+                                                <h3 class="h4 m-0 text-white">We rebuilt the customer journey from brand perception to repeat purchase</h3>
+                                                <div class="case-study-solutions">
+                                                    <div class="case-study-solution">
+                                                        <span class="case-study-solution-icon"><i class="icon icon-2 unicon-color-palette"></i></span>
+                                                        <div class="vstack gap-1"><h4 class="h6 m-0 text-white">Branding</h4><p class="fs-7 text-gray-300 m-0">A sharper identity, cleaner menu system, and a premium visual language.</p></div>
+                                                    </div>
+                                                    <div class="case-study-solution">
+                                                        <span class="case-study-solution-icon"><i class="icon icon-2 unicon-laptop"></i></span>
+                                                        <div class="vstack gap-1"><h4 class="h6 m-0 text-white">Website</h4><p class="fs-7 text-gray-300 m-0">A conversion-led site focused on direct bookings, orders, and guest capture.</p></div>
+                                                    </div>
+                                                    <div class="case-study-solution">
+                                                        <span class="case-study-solution-icon"><i class="icon icon-2 unicon-rocket"></i></span>
+                                                        <div class="vstack gap-1"><h4 class="h6 m-0 text-white">Marketing</h4><p class="fs-7 text-gray-300 m-0">Paid campaigns, local SEO, retargeting, and repeat-visit promotion flows.</p></div>
+                                                    </div>
+                                                    <div class="case-study-solution">
+                                                        <span class="case-study-solution-icon"><i class="icon icon-2 unicon-layers"></i></span>
+                                                        <div class="vstack gap-1"><h4 class="h6 m-0 text-white">Unique SaaS Idea</h4><p class="fs-7 text-gray-300 m-0">A custom "TablePulse" dashboard that predicts no-show risk and triggers smart fill-the-table offers.</p></div>
+                                                    </div>
+                                                    <div class="case-study-solution">
+                                                        <span class="case-study-solution-icon"><i class="icon icon-2 unicon-calendar"></i></span>
+                                                        <div class="vstack gap-1"><h4 class="h6 m-0 text-white">Booking System</h4><p class="fs-7 text-gray-300 m-0">Direct reservations with reminders, capacity controls, and customer-data capture.</p></div>
+                                                    </div>
+                                                    <div class="case-study-solution">
+                                                        <span class="case-study-solution-icon"><i class="icon icon-2 unicon-mobile"></i></span>
+                                                        <div class="vstack gap-1"><h4 class="h6 m-0 text-white">Mobile App</h4><p class="fs-7 text-gray-300 m-0">A loyalty-first app with reorders, push offers, and direct booking access.</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="case-study-stage">
+                                            <span class="case-study-stage-number">03</span>
+                                            <div class="vstack gap-3">
+                                                <span class="case-study-story-label result">The Result</span>
+                                                <h3 class="h4 m-0 text-white">The restaurant stopped renting attention and started owning revenue</h3>
+                                                <div class="case-study-kpis">
+                                                    <div class="case-study-kpi"><div class="fs-7 text-gray-400 mb-1">Direct bookings</div><div class="h4 m-0 text-primary">+214%</div></div>
+                                                    <div class="case-study-kpi"><div class="fs-7 text-gray-400 mb-1">Delivery fees saved</div><div class="h4 m-0 text-primary">€39K/year</div></div>
+                                                    <div class="case-study-kpi"><div class="fs-7 text-gray-400 mb-1">Repeat customer rate</div><div class="h4 m-0 text-primary">+61%</div></div>
+                                                    <div class="case-study-kpi"><div class="fs-7 text-gray-400 mb-1">Monthly revenue</div><div class="h4 m-0 text-primary">+47%</div></div>
+                                                </div>
+                                                <ul class="case-study-bullet-list result list-none m-0 ps-0">
+                                                    <li><i class="icon icon-1 unicon-checkmark"></i><span>The owner gained a direct relationship with customers instead of relying on marketplaces to create demand.</span></li>
+                                                    <li><i class="icon icon-1 unicon-checkmark"></i><span>The new booking flow, app, and SaaS layer created a repeatable retention engine instead of random peaks and dips.</span></li>
+                                                    <li><i class="icon icon-1 unicon-checkmark"></i><span>The business looked stronger, sold better online, and operated with much more clarity behind the scenes.</span></li>
+                                                </ul>
+                                                <div class="case-study-quote">"Before, we had traffic but no system. Now the brand, the bookings, the app, and the campaigns all work together. It feels like a real growth machine."</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
