@@ -162,6 +162,24 @@
             border-color: var(--bs-primary) !important;
             background: linear-gradient(45deg, rgba(24, 141, 114, 0.38), transparent) !important;
         }
+        .hero-cta-buttons .btn,
+        #final-cta .final-cta-button {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-align: center;
+        }
+        .hero-cta-buttons .btn {
+            min-height: 56px;
+        }
+        #final-cta .final-cta-button {
+            width: 100%;
+        }
+        .hero-cta-buttons .btn .icon,
+        #final-cta .final-cta-button .icon {
+            margin: 0 !important;
+        }
         #faq .uc-accordion > li {
             background: transparent !important;
             border: 0 !important;
@@ -370,7 +388,7 @@
                             </p>
 
                             <!-- CTA Buttons -->
-                            <div class="panel vstack sm:hstack gap-2 lg:gap-3 mt-2">
+                            <div class="panel vstack sm:hstack gap-2 lg:gap-3 mt-2 hero-cta-buttons">
                                 <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary px-4 lg:px-6 rounded-pill">
                                     <i class="icon icon-1 unicon-calendar me-1"></i> Book Your Free Strategy Call
                                 </a>
@@ -1354,7 +1372,7 @@
                                     <span>✓ Free digital audit</span>
                                     <span>✓ Clear action plan</span>
                                 </div>
-                                <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary px-6 py-3 rounded-pill fs-5">
+                                <a href="#uc-contact-modal" data-uc-toggle class="btn btn-lg btn-primary px-6 py-3 rounded-pill fs-5 final-cta-button">
                                     <i class="icon icon-1 unicon-calendar me-1"></i> Book Your Free Strategy Call Now
                                 </a>
                                 <p class="fs-7 text-gray-400 m-0">⏱️ Only 3 strategy call slots available this week</p>
