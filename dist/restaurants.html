@@ -113,6 +113,56 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Match homepage dark theme contrast and button treatment */
+        #wrapper .text-gray-300 {
+            color: rgba(255, 255, 255, 0.72) !important;
+        }
+        #wrapper .text-gray-400 {
+            color: rgba(255, 255, 255, 0.56) !important;
+        }
+        #wrapper .border-gray-700,
+        #wrapper .border-tertiary-600 {
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        #pain-points .row > div > .panel,
+        #services .uc-switcher .row > div > .panel,
+        #process .row > div > .panel,
+        #results .row > div > .panel,
+        #who-for .row > div > .panel,
+        #pricing .row > div > .panel,
+        #faq .uc-accordion > li {
+            background: linear-gradient(45deg, rgba(27, 70, 81, 0.92), transparent) !important;
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        #services [data-uc-tab] a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            border-color: rgba(255, 255, 255, 0.15) !important;
+            background: transparent !important;
+        }
+        #services [data-uc-tab] .uc-active a,
+        #services [data-uc-tab] a[aria-selected="true"] {
+            color: #ffffff !important;
+            border-color: var(--bs-primary) !important;
+            background: linear-gradient(45deg, rgba(24, 141, 114, 0.24), transparent) !important;
+        }
+        .btn-outline-white {
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            background: linear-gradient(45deg, rgba(24, 141, 114, 0.24), transparent) !important;
+        }
+        .btn-outline-white:hover {
+            color: #ffffff !important;
+            border-color: var(--bs-primary) !important;
+            background: linear-gradient(45deg, rgba(24, 141, 114, 0.38), transparent) !important;
+        }
+        #faq .uc-accordion-title,
+        #faq .uc-accordion-content {
+            color: #ffffff !important;
+        }
+        #faq .uc-accordion-content {
+            opacity: 0.72;
+        }
     </style>
 
     <!-- app head for bootstrap core -->
@@ -346,7 +396,7 @@
                                 <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-danger border-opacity-30 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                     <div class="vstack gap-3">
                                         <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                            <i class="icon icon-2 unicon-ban text-danger"></i>
+                                            <i class="icon icon-2 unicon-cart text-danger"></i>
                                         </div>
                                         <h3 class="h5 m-0 text-white">Losing 25% to Delivery Apps</h3>
                                         <p class="fs-6 text-gray-300 m-0">Uber Eats and Bolt Food are eating your margins. You need your own ordering system.</p>
@@ -359,7 +409,7 @@
                                 <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-danger border-opacity-30 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                     <div class="vstack gap-3">
                                         <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                            <i class="icon icon-2 unicon-eye-slash text-danger"></i>
+                                            <i class="icon icon-2 unicon-search text-danger"></i>
                                         </div>
                                         <h3 class="h5 m-0 text-white">Invisible Online</h3>
                                         <p class="fs-6 text-gray-300 m-0">No one can find you on Google. Your competitors are stealing your customers every single day.</p>
@@ -372,7 +422,7 @@
                                 <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-danger border-opacity-30 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                     <div class="vstack gap-3">
                                         <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                            <i class="icon icon-2 unicon-palette text-danger"></i>
+                                            <i class="icon icon-2 unicon-color-palette text-danger"></i>
                                         </div>
                                         <h3 class="h5 m-0 text-white">No Brand Identity</h3>
                                         <p class="fs-6 text-gray-300 m-0">Every restaurant on the street looks the same. You need to be unforgettable.</p>
@@ -385,7 +435,7 @@
                                 <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-danger border-opacity-30 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                     <div class="vstack gap-3">
                                         <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                            <i class="icon icon-2 unicon-user-x text-danger"></i>
+                                            <i class="icon icon-2 unicon-user text-danger"></i>
                                         </div>
                                         <h3 class="h5 m-0 text-white">No Repeat Customers</h3>
                                         <p class="fs-6 text-gray-300 m-0">You work hard to get a customer, then never see them again. No loyalty system, no retention.</p>
@@ -398,7 +448,7 @@
                                 <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-danger border-opacity-30 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                     <div class="vstack gap-3">
                                         <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                            <i class="icon icon-2 unicon-head-side-thinking text-danger"></i>
+                                            <i class="icon icon-2 unicon-tools text-danger"></i>
                                         </div>
                                         <h3 class="h5 m-0 text-white">Tech Overwhelm</h3>
                                         <p class="fs-6 text-gray-300 m-0">Too many tools, none of them connected. You're managing chaos, not a business.</p>
@@ -411,7 +461,7 @@
                                 <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-danger border-opacity-30 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                     <div class="vstack gap-3">
                                         <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                            <i class="icon icon-2 unicon-chart-down text-danger"></i>
+                                            <i class="icon icon-2 unicon-code text-danger"></i>
                                         </div>
                                         <h3 class="h5 m-0 text-white">No Data, No Decisions</h3>
                                         <p class="fs-6 text-gray-300 m-0">You don't know which dishes are profitable, which ads work, or why sales dropped last Tuesday.</p>
@@ -517,7 +567,7 @@
                                             <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-primary border-opacity-20 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                                 <div class="vstack gap-3">
                                                     <div class="cstack w-48px h-48px rounded-1-5 bg-primary bg-opacity-15">
-                                                        <i class="icon icon-2 unicon-restaurant text-primary"></i>
+                                                        <i class="icon icon-2 unicon-cart text-primary"></i>
                                                     </div>
                                                     <h4 class="h6 m-0 text-white">Menu Design (Print + Digital)</h4>
                                                     <p class="fs-6 text-gray-300 m-0">QR menus, digital displays, redesigned print menus that upsell and delight.</p>
@@ -567,7 +617,7 @@
                                             <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-primary border-opacity-20 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                                 <div class="vstack gap-3">
                                                     <div class="cstack w-48px h-48px rounded-1-5 bg-primary bg-opacity-15">
-                                                        <i class="icon icon-2 unicon-dollar-sign text-primary"></i>
+                                                        <i class="icon icon-2 unicon-code text-primary"></i>
                                                     </div>
                                                     <h4 class="h6 m-0 text-white">Dynamic Pricing Engine</h4>
                                                     <p class="fs-6 text-gray-300 m-0">AI suggests optimal pricing based on demand, weather, and local events.</p>
@@ -667,7 +717,7 @@
                                             <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-primary border-opacity-20 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                                 <div class="vstack gap-3">
                                                     <div class="cstack w-48px h-48px rounded-1-5 bg-primary bg-opacity-15">
-                                                        <i class="icon icon-2 unicon-megaphone text-primary"></i>
+                                                        <i class="icon icon-2 unicon-rocket text-primary"></i>
                                                     </div>
                                                     <h4 class="h6 m-0 text-white">Paid Ad Management</h4>
                                                     <p class="fs-6 text-gray-300 m-0">Meta, Google, TikTok ads that actually fill tables. Managed by restaurant marketing experts.</p>
@@ -678,7 +728,7 @@
                                             <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-primary border-opacity-20 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                                 <div class="vstack gap-3">
                                                     <div class="cstack w-48px h-48px rounded-1-5 bg-primary bg-opacity-15">
-                                                        <i class="icon icon-2 unicon-envelope text-primary"></i>
+                                                        <i class="icon icon-2 unicon-chat text-primary"></i>
                                                     </div>
                                                     <h4 class="h6 m-0 text-white">Email & SMS Automation</h4>
                                                     <p class="fs-6 text-gray-300 m-0">Automated campaigns that bring customers back. Birthday offers, re-engagement, new menu alerts.</p>
@@ -689,7 +739,7 @@
                                             <div class="panel p-4 lg:p-5 h-100 bg-tertiary-800 border border-primary border-opacity-20 rounded-2 hover:border-opacity-100 transition-all duration-300">
                                                 <div class="vstack gap-3">
                                                     <div class="cstack w-48px h-48px rounded-1-5 bg-primary bg-opacity-15">
-                                                        <i class="icon icon-2 unicon-video text-primary"></i>
+                                                        <i class="icon icon-2 unicon-camera text-primary"></i>
                                                     </div>
                                                     <h4 class="h6 m-0 text-white">Influencer & UGC Strategy</h4>
                                                     <p class="fs-6 text-gray-300 m-0">Turn customers into content creators. User-generated content that sells.</p>
@@ -1019,7 +1069,7 @@
                                     <div class="vstack gap-4">
                                         <div class="hstack gap-3">
                                             <div class="cstack w-56px h-56px rounded-circle bg-primary text-dark">
-                                                <i class="icon icon-2 unicon-check-circle"></i>
+                                                <i class="icon icon-2 unicon-checkmark"></i>
                                             </div>
                                             <h3 class="h5 m-0 text-white">✅ This IS For You If:</h3>
                                         </div>
@@ -1043,7 +1093,7 @@
                                     <div class="vstack gap-4">
                                         <div class="hstack gap-3">
                                             <div class="cstack w-56px h-56px rounded-circle bg-danger bg-opacity-15">
-                                                <i class="icon icon-2 unicon-times-circle text-danger"></i>
+                                                <i class="icon icon-2 unicon-close text-danger"></i>
                                             </div>
                                             <h3 class="h5 m-0 text-white">❌ This is NOT For You If:</h3>
                                         </div>
@@ -1232,62 +1282,49 @@
 
                         <!-- FAQ Accordion -->
                         <div class="panel" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
-                            <ul class="uc-accordion-divider uc-accordion" data-uc-accordion="targets: > li; content: 0;">
-                                
-                                <!-- FAQ 1 -->
-                                <li class="panel bg-tertiary-700 border border-gray-700 rounded-2 px-4 lg:px-5 py-3 mb-3 uc-open">
-                                    <a class="uc-accordion-title h5 lg:h4 m-0 p-0 text-white hstack justify-between" href="#"><span>How quickly can you deliver my website/app?</span></a>
-                                    <div class="uc-accordion-content vstack gap-2 px-0 pb-0 pt-3 fs-6 text-gray-300">
+                            <ul class="uc-accordion uc-accordion-divider gap-4 max-w-md mx-auto" style="--divider-gap: 24px;" data-uc-accordion="targets: > li; multiple: false;">
+                                <li class="panel uc-open">
+                                    <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">How quickly can you deliver my website/app?</a>
+                                    <div class="uc-accordion-content lg:fs-5 opacity-70">
                                         <p>Starter packages: <strong>2 weeks</strong>. Professional packages: <strong>3-4 weeks</strong>. Enterprise/custom solutions: <strong>4-8 weeks</strong> depending on complexity. We can fast-track for urgent projects (extra fees apply).</p>
                                         <p class="m-0">The timeline depends on how quickly you provide content (photos, menu, text). We'll give you a detailed project timeline on our discovery call.</p>
                                     </div>
                                 </li>
-
-                                <!-- FAQ 2 -->
-                                <li class="panel bg-tertiary-700 border border-gray-700 rounded-2 px-4 lg:px-5 py-3 mb-3">
-                                    <a class="uc-accordion-title h5 lg:h4 m-0 p-0 text-white hstack justify-between" href="#"><span>Do I need technical knowledge to manage the system?</span></a>
-                                    <div class="uc-accordion-content vstack gap-2 px-0 pb-0 pt-3 fs-6 text-gray-300">
+                                <li class="panel">
+                                    <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">Do I need technical knowledge to manage the system?</a>
+                                    <div class="uc-accordion-content lg:fs-5 opacity-70">
                                         <p>Absolutely not. We design everything to be <strong>brain-dead simple</strong>. If you can use Facebook or WhatsApp, you can manage your website/app.</p>
                                         <p class="m-0">Plus, we provide full training for you and your staff, along with video tutorials and documentation. And if you ever get stuck, our support team is one message away.</p>
                                     </div>
                                 </li>
-
-                                <!-- FAQ 3 -->
-                                <li class="panel bg-tertiary-700 border border-gray-700 rounded-2 px-4 lg:px-5 py-3 mb-3">
-                                    <a class="uc-accordion-title h5 lg:h4 m-0 p-0 text-white hstack justify-between" href="#"><span>What if I don't like the design?</span></a>
-                                    <div class="uc-accordion-content vstack gap-2 px-0 pb-0 pt-3 fs-6 text-gray-300">
-                                        <p>That's why we offer <strong>unlimited revisions</strong> on Professional and Enterprise packages (2 rounds on Starter). You'll see mockups before we build anything, and we'll iterate until you're 100% happy.</p>
-                                        <p class="m-0">Our job is to make your restaurant look amazing online. We won't stop until we get it right.</p>
+                                <li class="panel">
+                                    <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">What if I don't like the design?</a>
+                                    <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                        <p>That's why we offer <strong>unlimited revisions</strong> on Professional and Enterprise packages. You'll see mockups before we build anything, and we'll iterate until you're 100% happy.</p>
+                                        <p class="m-0">Our job is to make your restaurant look sharp online. We won't stop until the presentation is right.</p>
                                     </div>
                                 </li>
-
-                                <!-- FAQ 4 -->
-                                <li class="panel bg-tertiary-700 border border-gray-700 rounded-2 px-4 lg:px-5 py-3 mb-3">
-                                    <a class="uc-accordion-title h5 lg:h4 m-0 p-0 text-white hstack justify-between" href="#"><span>Can you integrate with my existing POS or management system?</span></a>
-                                    <div class="uc-accordion-content vstack gap-2 px-0 pb-0 pt-3 fs-6 text-gray-300">
-                                        <p>In most cases, <strong>yes</strong>. We've integrated with dozens of POS systems (Toast, Square, Lightspeed, Revel, etc.) and management platforms.</p>
-                                        <p class="m-0">If your system has an API, we can connect it. We'll confirm compatibility during our discovery call.</p>
+                                <li class="panel">
+                                    <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">Can you integrate with my existing POS or management system?</a>
+                                    <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                        <p>In most cases, <strong>yes</strong>. We've integrated with a wide range of POS systems and management platforms.</p>
+                                        <p class="m-0">If your system has an API, we can usually connect it. We'll confirm compatibility during the discovery call.</p>
                                     </div>
                                 </li>
-
-                                <!-- FAQ 5 -->
-                                <li class="panel bg-tertiary-700 border border-gray-700 rounded-2 px-4 lg:px-5 py-3 mb-3">
-                                    <a class="uc-accordion-title h5 lg:h4 m-0 p-0 text-white hstack justify-between" href="#"><span>What happens after the project is delivered?</span></a>
-                                    <div class="uc-accordion-content vstack gap-2 px-0 pb-0 pt-3 fs-6 text-gray-300">
-                                        <p>You're not abandoned. Every package includes <strong>post-launch support</strong> (duration varies by package). After that, you can choose a monthly support plan or handle updates yourself.</p>
-                                        <p class="m-0">We also monitor performance and provide optimization recommendations to help you get the most out of your investment.</p>
+                                <li class="panel">
+                                    <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">What happens after the project is delivered?</a>
+                                    <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                        <p>You're not abandoned. Every package includes post-launch support, and we also offer ongoing monthly support plans.</p>
+                                        <p class="m-0">That covers updates, fixes, performance checks, and practical recommendations as your restaurant grows.</p>
                                     </div>
                                 </li>
-
-                                <!-- FAQ 6 -->
-                                <li class="panel bg-tertiary-700 border border-gray-700 rounded-2 px-4 lg:px-5 py-3 mb-3">
-                                    <a class="uc-accordion-title h5 lg:h4 m-0 p-0 text-white hstack justify-between" href="#"><span>Why are you more expensive than Wix or Squarespace?</span></a>
-                                    <div class="uc-accordion-content vstack gap-2 px-0 pb-0 pt-3 fs-6 text-gray-300">
-                                        <p>Because Wix won't cut your delivery app fees by €50K/year. Squarespace won't build you a loyalty program that drives repeat customers. Those are DIY tools—fine for blogs, terrible for restaurants.</p>
-                                        <p class="m-0">We build <strong>custom business systems</strong> designed specifically for restaurants. It's the difference between a €20 knife from IKEA and a €200 chef's knife—both cut, but one is built for professionals.</p>
+                                <li class="panel">
+                                    <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 text-white" href="#">Why are you more expensive than Wix or Squarespace?</a>
+                                    <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                        <p>Because Wix and Squarespace are DIY tools. They don't replace delivery app commissions, automate retention, or connect the restaurant systems that affect revenue.</p>
+                                        <p class="m-0">We build a custom business system around your restaurant, not just a brochure page.</p>
                                     </div>
                                 </li>
-
                             </ul>
                         </div>
 
